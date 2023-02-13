@@ -1,0 +1,6 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Bitumen Netbacks}{3}{0}{2}
+\beamer@sectionintoc {3}{GHG Emissions}{18}{0}{3}
+\beamer@sectionintoc {4}{Bill C-69 and Climate Tests}{24}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{33}{0}{5}

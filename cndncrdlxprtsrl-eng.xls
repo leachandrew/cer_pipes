@@ -1,0 +1,79 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>HTTP 404 - File not found | HTTP 404 - Fichier non trouv&eacute;</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="/Templates/wet4-gcwu/theme-gcwu-fegc/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="/Templates/wet4-gcwu/theme-gcwu-fegc/css/theme-srv.min.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<link href="/Templates/wet4-gcwu/theme-gcwu-fegc/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="/Templates/wet4-gcwu/theme-gcwu-fegc/css/ie8-theme-srv.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/Templates/wet4-gcwu/wet-boew/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<noscript><link rel="stylesheet" href="/Templates/wet4-gcwu/wet-boew/css/noscript.min.css" /></noscript>
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<header role="banner" class="container">
+<div id="wb-bnr" class="row">
+<div class="row">
+<div class="col-sm-6">
+<object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="/Templates/wet4-gcwu/theme-gcwu-fegc/assets/sig-alt-en.svg" aria-label="Government of Canada"></object>
+</div>
+<div class="col-sm-6">
+<object id="wmms" type="image/svg+xml" tabindex="-1" role="img" data="/Templates/wet4-gcwu/theme-gcwu-fegc/assets/wmms-alt.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</header>
+<main role="main" property="mainContentOfPage" class="container">
+<div class="row mrgn-tp-lg">
+<h1 class="wb-inv">HTTP 404 - File not found | <span lang="fr">HTTP 404 - Fichier non trouv&eacute;</span></h1>
+<section class="col-md-6">
+<h2><span class="glyphicon glyphicon-warning-sign mrgn-rght-md"></span> HTTP 404 - File not found</h2>
+<p>The Canada Energy Regulator has launched a new website based on user feedback and best practices. The page you are looking for might have been removed or had its name changed.</p>
+<ul>
+<li><a href="/en/index.html">Home</a></li>
+<li><a href="/en/safety-environment/index.html">Safety and environment</a></li>
+<li><a href="/en/consultation-engagement/index.html">Consultation and engagement</a></li>
+<li><a href="/en/applications-hearings/index.html">Applications and hearings</a></li>
+<li><a href="/en/data-analysis/index.html">Data and analysis</a></li>
+<li><a href="/en/about/index.html">About Us</a></li>
+<li><a href="/en/about/contact/index.html">Contact us</a></li>
+</ul>		  
+</section>
+<section class="col-md-6" lang="fr">
+<h2><span class="glyphicon glyphicon-warning-sign mrgn-rght-md"></span> HTTP 404 - Fichier non trouv&eacute;</h2>
+<p>La Régie de l’énergie du Canada a lancé son nouveau site Web le 1er octobre, pour vous aider à trouver l’information dont vous avez besoin. La page que vous cherchez a peut-être été supprimée ou a changé de nom. </p>
+<ul>
+<li><a href="/fr/index.html">Accueil</a></li>
+<li><a href="/fr/securite-environnement/index.html">S&eacute;curit&eacute; et environnement</a></li>
+<li><a href="/fr/consultation-mobilisation/index.html">Consultation et mobilisation</a></li>
+<li><a href="/fr/demandes-audiences/index.html">Demandes et audiences</a></li>
+<li><a href="/fr/donnees-analyse/index.html">Données et analyse</a></li>
+<li><a href="/fr/regie/index.html">La Régie</a></li>
+<li><a href="/fr/regie/coordonnees/index.html">Contactez-nous</a></li>
+</ul>
+</section>
+</div>
+</main>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="/Templates/wet4-gcwu/wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="/Templates/wet4-gcwu/wet-boew/js/ie8-wet-boew2.min.js"></script>
+
+<![endif]-->
+<script src="/Templates/wet4-gcwu/theme-gcwu-fegc/js/theme.min.js"></script>
+</body>
+</html>

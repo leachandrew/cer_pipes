@@ -1,0 +1,118 @@
+---
+title: "Pipelines, Netbacks and Trade: A Case Study of the Oil Sands"
+author: "Andrew Leach"
+date: "March 2019"
+output: word_document
+reference_docx: ".docx"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+###Introduction
+
+The rise of light tight oil since 2008 has fundamentally altered global crude oil markets: it has added more than 5 million barrels per dat of producuction at relatively low costs, it has caused a prolonged and un-expected depression in oil prices, and has changed the geopolitics of crude oil markets.  In North America, the change was even more prounounced.  Regions which had historically been short oil, like the US midwest, became over-supplied and started moving oil out.  The US Gulf Coast, long solely an oil importer became an exporter of crude oil, at least the lighter and medium grades thereof, while continuing to import heavier crudes. We've seen what used to be premium benchmark prices such as West Texas Intermediate (WTI) invert to trade at significan discounts to global crudes such as Brent, and a host of other pricing relationships have followed.  Stuck at the northern end of the North American pipeline network is Alberta.  For decades, Alberta benefitted from easy access to northern US markets willing to pay a premium for oil in general, and saw many refineries in those regions refit to process the heavier crude which began to flow from Alberta's newer, in situ oil sands projects.  Now, those refineries have benefitted from a market over-supplied with heavy crude and Alberta, isolated from other markets, has seen its products face large differentials and its economy face an uncertain future.  While much of this challenge in Alberta has been passed off as a lack of market access or, more simply, a lack of pipelines, this chapter will take that analysis one step deeper and argue that Alberta has also seen its market eroded by the change in flow in North American oil markets which has set Alberta's crude further away from key markets and which makes a return to the good times in Alberta something which will not be acheived simply with the construction of pipelines.
+
+has inversed relative to historically relationships, and North Sea and West African barrels that historically moved to North America had to find new homes in Asia, pushing out Middle Eastern barrels. All of this had major impacts on price, trade, OPEC and, ultimately infrastructure, including pipelines and shipping.
+What about the next decade?  Will infrastructure become increasingly important given all these changes? And how will this impact Canadian oil production?
+If you look at the major forecasters, like the IEA and EIA, it appears that US tight oil growth will continue for some time.  In March 2018, the EIA reported US production at 10.47 million barrels per day, a record level.  The EIA Annual Energy Outlook 2018 implies that the fevered growth in US tight oil over the next ten to twelve years is on pace to exceed the most dramatic sustained rise in output ever seen by an individual country.  As can be seen from the graphic below, total US production remains between 11 million and 12 million barrels per day, even through the 2030s. 
+
+
+
+
+
+![](../../BB Stuff/cdn_bitumen_net.png)
+
+
+
+Source: EIA AEO 2018
+Lower 48 onshore tight oil development will drive US crude oil production, accounting for 65% of domestic production during the forecast period. The Permian and Bakken/Niobrara basins will lead production. Growth in the Gulf Coast region increases through 2025 before flattening out as drilling in the Eagle Ford region becomes less productive:
+Oil production (mb/d)
+ 	2017	2030	Growth
+Permian	2.5	4.0	3.7%
+Bakken/Niobrara	1.7	2.4	2.5%
+Eagle Ford	1.6	1.9	1.6%
+Source: EIA AEO 2018
+What about US domestic consumption for crude? The same AEO report expects consumption to peak and begin to decline, resulting in the US becoming a net exporter by 2022. 
+Global supply and demand
+The International Energy Agency's (IEA) New Policies scenario accounts for policies and measures that governments have already put in place as well as the likely effects of announced policies and expressed plans. Two key assumptions that impact the IEA's World Energy Outlook are the changes underway in China's economy and energy policy which will largely affect demand, and the rapid growth of tight oil in the US.
+In the long-term, production from the Middle East and OPEC is expected to slightly grow with the majority of production coming from Iraq and Saudi Arabia. In the medium term, output is expected to decline in nearly all OPEC member countries outside of the Middle East with the exception of Libya who have managed to increase production despite the ongoing civil unrest threatening its oil infrastructure. The economic crisis and political instability in Venezuela is expected to persist, therefore the IEA predicts that they will unlikely increase production in the forecast period. The majority of Latin American crude oil production growth will come from Brazil. Despite new production from projects in east Siberia and the Arctic, total Russian oil production is projected to decline through the forecast period as growth slows in the mature production regions of western Siberia and Volga-Urals.
+Oil production (mb/d)
+ 	2017	2030	Growth
+Middle East	32.0	35.4	0.8%
+Latin America	10.0	12.2	1.5%
+Russia	11.3	9.7	-1.2%
+Source: IEA WEO 2017
+Total world oil production is expected to grow to nearly 100 mb/d by 2030 - 42% of this coming from OPEC:
+ 
+Source: IEA WEO 2017
+Canada's supply and demand balance
+Western Canadian crude oil supply has been increasing steadily for the past number of years, driven primarily by oil sands growth.  From 2010 to 2016, total supply increased from approximately 2.5 million b/d to 3.9 million b/d.  According to many forecasters, Canadian production is expected to continuing growing, albeit at a slower pace than previously thought.  The outlook for 2030 for total Western Canadian supply from CAPP shows production reaching over 5 million barrels per day.
+   
+
+Canada's total refining capacity is 1.9 million barrels per day (TK), with Western Canadian crude accessing primarily the Western refineries due to the setup of the pipeline network and Eastern refineries configured for light crude.  
+From the balance, Canada is primarily an exporter of crude and historically has moved crude on pipelines and small amounts on rail. As with other producing regions, at many times over the past decade, supply has grown faster than the infrastructure needed to transport it out of the region and with all the challenges around building new infrastructure this is expected to continue to be the case.
+Pipelines and flows
+Today, Western Canada has over 4 million barrels per day of export pipeline nameplate capacity, but operational capacity is closer to 3.3 million barrels per day (CAPP 2017).  This lower operational capacity means that all pipelines are running at capacity, and many are on apportionment.   
+Almost all of Canadian crude exports today go to the US, primarily to the US Midwest market, with a smaller proportion reaching the US Gulf Coast. 
+ 
+However, as Canadian crude production continues to grow, additional barrels will need to travel further to find a market.  The US Gulf Coast has a significant amount of heavy refining capacity, making it a natural market for Canadian heavy crude.  What are the challenges to get more crude to the US Gulf Coast? First, Canadian barrels will compete with heavy barrels from other regions, like Mexican Maya and Venezuelan barrels. Second, while the current pipeline network can reach the Gulf Coast, ie Seaway or TransCanada Gulf Coast, light and heavy barrels today both travel on these lines, and it depends on who hold the contracted capacity. Lastly, transportation costs will come into play - it is more expensive to transport a heavy barrel of crude than a light barrel and Canadian barrels are competing with waterborne barrels from other locations - which generally have lower transportation costs.  
+In addition, as production grows and given the global competition of heavy barrels, it is beneficial to open markets for Canadian barrels outside of the US. There are other parts of the world with heavy refining capacity, for example, parts of Asia and Mediterranean Europe.  
+Given the need for additional export capacity, there are three projects that are proposed at this time: the Trans Mountain Expansion, TransCanada's Keystone XL and Enbrige's Line 3 replacement.  
+Cost and pricing
+At several times over the past decade, the total number of crude barrels available for export out of Western Canada has exceeded the available pipeline capacity and prices have weakened significantly as a result.  
+This is best shown in the difference between Western Canadian Select (WCS) and West Texas Intermediate (WTI).  The WCS-WTI differential, at a most basic calculation, represents the quality and locational differential between a light, sweet barrel located in the US Midwest (WTI) and a diluted bitumen (heavy, sour) barrel produced in Alberta.  If all of the fundamentals of supply and demand are in balance, the difference between those two would be less than $10/bbl, but it is rare that all factors are in balance.  In the cases when there has been insufficient takeaway capacity, the price is set by the next available transport option, like rail -which is more expensive, and if that is unavailable, then it could represent the cost of putting the barrels into storage, or finally the cost of shutting production down.  As has been mentioned, there have been several times over the past decade when a lack of pipeline capacity has resulted in a much wider differential between WTI and WCS; in 2012, 2013 and in early 2018, the differential was wider than $25/bbl. For example, in early 2018, world prices for crudes were in the $60/bbl range and WCS was pricing around $36/bbl.
+ 
+Netbacks
+ 
+Historically, the majority of Canadian flows have moved to the US Midwest due to higher netbacks. For example, WTI 65 - quality discount $3-  $5 tcost on Enbridge, Canadian producer achieved 57.  
+The cost of transport for a heavy barrel to the Gulf is about $10 (calc Enbridge), so Maya today is pricing at 63.16 - 10 =53.16.  
+The current transmountain cost is 5$ but you get an Asian based price for it.  Even assuming shipping cost of 2, heavy price at 70(?)-5-2 =63
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+### Pipeline Utilization
+
+
+```{r echo = FALSE, warning=FALSE,message=FALSE, results="asis", cache=FALSE, fig.width=10, fig.pos="H"}
+#wind_fcast_plot
+```
+
+
+
+###Crude Movements in the US
+
+
+###Crude Trade in Canada and the US
+
+
+
+### Crude by Rail
+
+
+### The Case for New Pipelines
+
+
+
+### Upgrading, Refining, and the Case for Pipelines
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,359 @@
+%First Beamer Talk
+
+\documentclass{beamer}
+
+% Setup appearance:
+
+\usetheme{Darmstadt}
+%\usecolortheme{lily}
+%\usefonttheme[onlylarge]{structurebold}
+%\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+%\useinnertheme{circles}
+
+
+% Standard packages
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{multirow}
+\usepackage{capt-of}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+
+\setbeamertemplate{blocks}[rounded] [shadow=false]
+
+% Some optional colors. Change or add as you see fit.
+%---------------------------------------------------
+ \definecolor{ualbertagreen}{HTML}{007C41}
+\definecolor{ualbertagold}{HTML}{FFDB05}
+
+
+% Some optional color adjustments to Beamer. Change as you see fit.
+%------------------------------------------------------------------
+\setbeamercolor{frametitle}{fg=ualbertagreen,bg=white}
+\setbeamercolor{title}{fg=ualbertagreen,bg=white}
+\setbeamercolor{author}{fg=ualbertagreen,bg=white}
+\setbeamercolor{date}{fg=ualbertagreen,bg=white}
+\setbeamercolor{affiliation}{fg=ualbertagreen,bg=white}
+\setbeamercolor{institute}{fg=ualbertagreen,bg=white}
+\setbeamercolor{local structure}{fg=ualbertagreen}
+\setbeamercolor{section in toc}{fg=ualbertagreen,bg=white}
+% \setbeamercolor{subsection in toc}{fg=ualbertagreen,bg=white}
+\setbeamercolor{footline}{fg=ualbertagreen!50, bg=white}
+\setbeamercolor{block title}{fg=ualbertagreen,bg=white}
+\setbeamercolor{upper separation line head}{bg=ualbertagreen}
+\setbeamercolor{lower separation line head}{bg=ualbertagold}
+\setbeamercolor{middle separation line head}{bg=ualbertagold}
+\setbeamercolor{frametitle}{fg=ualbertagreen,bg=white}
+
+\setbeamercolor{section in head/foot}{bg=white,fg=ualbertagreen}
+\setbeamercolor{author in head/foot}{bg=white,fg=ualbertagreen}
+\setbeamercolor{date in head/foot}{bg=white,,fg=ualbertagreen}
+\setbeamercolor{title in head/foot}{bg=white,fg=ualbertagreen}
+
+\setbeamercolor{headline}{bg=white,fg=ualbertagreen}
+
+
+
+
+\setbeamercolor{middle separation line head}{bg=ualbertagreen}
+\setbeamercolor{alerted text}{fg=red}
+\setbeamercolor{example text}{fg=black}
+\setbeamercolor{structure}{fg=black}
+
+% Various cosmetic things, though I must confess I forget what exactly these do and why I included them.
+%-------------------------------------------------------------------------------------------------------
+\setbeamercolor{structure}{fg=ualbertagreen}
+
+
+\setbeamercolor{local structure}{parent=structure}
+\setbeamercolor{item projected}{parent=item,use=item,fg=ualbertagreen,bg=white}
+\setbeamercolor{enumerate item}{parent=item}
+
+\setbeamertemplate{title page}{%
+  \vbox{}
+%  \vfill
+    \vspace{0cm}% NEW
+  \begingroup
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+      \usebeamerfont{title}\inserttitle\par%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.05em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,center]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+    \vspace{0.5cm}% NEW
+    \begin{beamercolorbox}[sep=8pt,center]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}\vskip0.05em
+%    {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+  \endgroup
+%  \vfill
+}
+
+
+\logo{
+   \tikz [remember picture,overlay]
+    \node[yshift=.3cm,xshift=1.5cm] at (current page.south west)
+        %or: (current page.center)
+        {\includegraphics[width=1in]{UA-ASB-COLOUR.png}};
+%\includegraphics[height=0.8cm]{UA-ASB-COLOUR.png}\vspace{220pt}
+}
+
+
+
+
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=5ex,dp=1.825ex]{white}%
+    \usebeamerfont{headline}\hskip6pt\inserttitle\par%
+    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+    \end{beamercolorbox}%
+  }
+}
+
+\setbeamertemplate{sidebar right}{}
+
+
+\logo{
+   \tikz [remember picture,overlay]
+    \node[yshift=.3cm,xshift=1.5cm] at (current page.south west)
+        %or: (current page.center)
+        {\includegraphics[width=1in]{UA-ASB-COLOUR.png}};
+%\includegraphics[height=0.8cm]{UA-ASB-COLOUR.png}\vspace{220pt}
+}
+
+
+
+
+%\setbeamertemplate{footline}{%
+%\hfill\usebeamertemplate***{navigation symbols}
+%\hspace{1cm}\insertframenumber{}/\inserttotalframenumber}
+\defbeamertemplate*{footline}{my footline}{%
+    \ifnum\insertpagenumber=1
+        \Tiny{%
+            \hfill%
+		\vspace*{1pt}%
+            %\insertframenumber/\inserttotalframenumber \hspace*{0.1cm}%
+            \newline%
+            \color{ualbertagold}{\rule{\paperwidth}{0.4mm}}\newline%
+            \color{ualbertagold}{\rule{\paperwidth}{.4mm}}%
+        }
+%    \hbox{%
+%        \begin{beamercolorbox}[wd=\paperwidth,ht=.8ex,dp=1ex,center]{}%
+%      % empty environment to raise height
+%        \end{beamercolorbox}%
+%    %}%
+    %\vskip0pt%
+    %no page number on the first page
+    %    \Tiny{%
+    %        \hfill%
+   % 		\vspace*{1pt}%
+    %        \color{ualbertagold}{\rule{\paperwidth}{0.4mm}}\newline%
+    %        \color{ualbertagold}{\rule{\paperwidth}{.4mm}}%
+%        }%
+  \else%
+        \Tiny{%
+            \hfill%
+		\vspace*{1pt}%
+            \insertframenumber/\inserttotalframenumber \hspace*{0.1cm}%
+            \newline%
+            \color{ualbertagold}{\rule{\paperwidth}{0.4mm}}\newline%
+            \color{ualbertagold}{\rule{\paperwidth}{.4mm}}%
+        }%
+    \fi%
+}
+
+
+
+
+
+
+
+
+
+\renewcommand{\(}{\begin{columns}}
+\renewcommand{\)}{\end{columns}}
+\newcommand{\<}[1]{\begin{column}{#1}}
+\renewcommand{\>}{\end{column}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+% Author, Title, etc.
+
+\title[Ivey Electricity Symposium 2018]
+{%
+  Climate Policy and Electricity Markets%
+}
+
+\author[Leach]
+{
+  Andrew~Leach
+}
+
+\institute[2018]
+{
+  Alberta School of Business, University of Alberta
+ }
+
+\date[10/18/2018]
+{\today}
+
+
+\newcommand{\degC}{$^o$C$\,$}
+\newcommand{\co}{$\text{CO}_{2}\,$}
+\newcommand{\tx}{$G_{2\times\text{CO}_2}$}
+\newcommand{\Real}{\mathbb R}
+
+
+
+% The main document
+
+
+\begin{document}
+
+\begin{frame}
+   \tikz [remember picture,overlay]
+    \node[yshift=-0.95cm,xshift=0cm] at (current page.north)
+        %or: (current page.center)
+        %\node[yshift=-0.75cm,xshift=4.5cm] at (current page.north west)
+        %{\includegraphics[width=3in]{UA-ASB-COLOUR.png}};
+        {\includegraphics[width=\paperwidth]{EE_logo.png}}; \vspace{1cm}
+   \titlepage
+   \vfill
+\end{frame}
+
+
+
+\section{4 Key Points}
+
+\begin{frame}{4 Key Points for Policy Design}
+\begin{itemize}
+\setlength\itemsep{.5em}
+\item Producers or grid operators will respond to carbon prices and policy design elements
+\item Make sure the incentives are correct
+\item Make sure the policy objectives and designs fit the region well
+\item Circumstances will be different in different markets - no one-size fits all
+\end{itemize}
+
+\vfill
+\end{frame}
+
+
+
+\section{Price Response}
+
+\begin{frame}{Dispatch Decisions Reflect GHG Prices and OBA Design}
+   \tikz [remember picture,overlay]
+    \node[yshift=-.75cm,xshift=0cm] at (current page.center)
+        {\includegraphics[width=.9\paperwidth]{gen_ghg_price.png}}; \vspace{1cm}
+   \vfill
+\end{frame}
+
+
+
+\section{Design Matters}
+
+\begin{frame}{Net Energy Revenues Reflect GHG Prices and OBA Design}
+   \tikz [remember picture,overlay]
+    \node[yshift=-.75cm,xshift=0cm] at (current page.center)
+        {\includegraphics[width=.9\paperwidth]{price_capture_ctax.png}}; \vspace{1cm}
+   \vfill
+\end{frame}
+
+\begin{frame}{Carbon prices drive variable costs}
+   \tikz [remember picture,overlay]
+    \node[yshift=-.85cm,xshift=0cm] at (current page.center)
+        {\includegraphics[width=.9\paperwidth]{cost_ctax.png}}; \vspace{1cm}
+   \vfill
+\end{frame}
+
+
+\begin{frame}{But change in OBA structure matters a lot more}
+   \tikz [remember picture,overlay]
+    \node[yshift=-.75cm,xshift=0cm] at (current page.center)
+        {\includegraphics[width=.9\paperwidth]{oba_value.png}}; \vspace{1cm}
+   \vfill
+\end{frame}
+
+\begin{frame}{Net Energy Revenues Reflect GHG Prices and OBA Design}
+   \tikz [remember picture,overlay]
+    \node[yshift=-.75cm,xshift=0cm] at (current page.center)
+        {\includegraphics[width=.9\paperwidth]{price_capture_ctax.png}}; \vspace{1cm}
+   \vfill
+\end{frame}
+
+
+
+\section{Incentives Matters}
+
+\begin{frame}{Are we sending the right price signal to all consumers and producers?}
+   \tikz [remember picture,overlay]
+    \node[yshift=-.75cm,xshift=0cm] at (current page.center)
+        {\includegraphics[width=.9\paperwidth]{../solar_price_signal_May.png}}; \vspace{1cm}
+   \vfill
+\end{frame}
+
+
+\section{Regional Differences Matters}
+
+
+\begin{frame}{What works in one jurisdiction may not work in another}
+   \tikz [remember picture,overlay]
+    \node[yshift=-.5cm,xshift=0cm] at (current page.center)
+        {\includegraphics[width=.9\paperwidth]{../home_battery5_1.png}}; \vspace{1cm}
+   \vfill
+\end{frame}
+
+
+\begin{frame}{What works in one jurisdiction may not work in another}
+   \tikz [remember picture,overlay]
+    \node[yshift=-.5cm,xshift=0cm] at (current page.center)
+        {\includegraphics[width=.9\paperwidth]{../home_battery12_1.png}}; \vspace{1cm}
+   \vfill
+\end{frame}
+
+
+\begin{frame}{What works in one jurisdiction may not work in another}
+   \tikz [remember picture,overlay]
+    \node[yshift=-.5cm,xshift=0cm] at (current page.center)
+        {\includegraphics[width=.9\paperwidth]{../net_zero_year.png}}; \vspace{1cm}
+   \vfill
+\end{frame}
+
+
+\section{Bold Policy Ideas}
+
+\begin{frame}{By Request}
+\begin{itemize}
+\setlength\itemsep{.5em}
+\item Commit to outcomes your policies are likely to achieve
+\item Remember that the electricity market is always broken for someone
+\item Write policies that fit your region, not California or Germany (unless those are your regions)
+\item Make sure your policies force advocates to put their money where their mouth is
+\end{itemize}
+
+\vfill
+\end{frame}
+
+
+
+
+
+\end{document}
