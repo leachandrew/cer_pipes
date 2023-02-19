@@ -8,10 +8,6 @@ print(getwd())
 
 source("andrew_base.R")
 
-#Set EIA API Key
-#you can get your own or use this one
-KEY <- "91b4dca0b858df64a2279d82f71af240"
-
 
 
 

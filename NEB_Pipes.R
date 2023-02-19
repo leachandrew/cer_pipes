@@ -1,8 +1,4 @@
 
-#Set EIA API Key
-#you can get your own or use this one
-KEY <- "91b4dca0b858df64a2279d82f71af240"
-
 
 names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
         "Keystone","MNP","Trans-Mountain","TQM","TCPLmainline","Westcoast")

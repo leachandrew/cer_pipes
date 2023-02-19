@@ -8,10 +8,6 @@ print(getwd())
 
 source("andrew_base.R")
 
-#Set EIA API Key
-#you can get your own or use this one
-KEY <- "91b4dca0b858df64a2279d82f71af240"
-
 
 names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
         "Keystone","MNP","Trans-Mountain","TQM","TCPLmainline","Westcoast")
@@ -683,8 +679,8 @@ if(png==1)#set these to only turn on if you're making PNG graphs
   dev.off()
 
 #French
-pipes_french<-c("Énergie Est","Northern Gateway","Agrandissement du réseau de Trans Mountain","Keystone XL","Agrandissements d'Enbridge","Keystone","Express","Trans Mountain","Rangeland/Milk River","Réseau principal d'Enbridge")
-pipes_french_real<-c("Agrandissement du réseau de Trans Mountain","Keystone XL","Agrandissements d'Enbridge","Keystone","Express","Trans Mountain","Rangeland/Milk River","Réseau principal d'Enbridge")
+pipes_french<-c("?nergie Est","Northern Gateway","Agrandissement du r?seau de Trans Mountain","Keystone XL","Agrandissements d'Enbridge","Keystone","Express","Trans Mountain","Rangeland/Milk River","R?seau principal d'Enbridge")
+pipes_french_real<-c("Agrandissement du r?seau de Trans Mountain","Keystone XL","Agrandissements d'Enbridge","Keystone","Express","Trans Mountain","Rangeland/Milk River","R?seau principal d'Enbridge")
 
 
 
@@ -698,7 +694,7 @@ ggplot(df1) +
   geom_line(aes(Year,CAPP.2014.Offtake*6.2929/1000, colour = "test3" ),size=3) +
   #geom_point(size=1) +
   #scale_color_viridis("",discrete=TRUE,option="D",labels="Expected Export Demand")+
-  scale_colour_manual("",labels=c("Pétrole disponible pour l'exportation (ONE,2016)","Pétrole disponible pour l'exportation (ACPP,2018)","Pétrole disponible pour l'exportation (ACPP,2014)"),values=c("Black","Grey40","Firebrick"))+
+  scale_colour_manual("",labels=c("P?trole disponible pour l'exportation (ONE,2016)","P?trole disponible pour l'exportation (ACPP,2018)","P?trole disponible pour l'exportation (ACPP,2014)"),values=c("Black","Grey40","Firebrick"))+
   #scale_fill_viridis("",discrete=TRUE,option="D")+
   scale_fill_manual("",values = mkColor(df1$Pipeline),guide = "legend",labels=pipes_french)+
   guides(colour = guide_legend(order = 1,nrow = (3)), 
@@ -706,9 +702,9 @@ ggplot(df1) +
   scale_y_continuous(expand = c(0, 0)) +
   scale_x_continuous(expand = c(0, 0)) +
   theme_classic()+slide_theme()+
-  labs(y="Capacité ou quantité prévue (mm bar/j)",x="Année",
-       title=paste("Prévisions de la capacité pipelinière canadienne d'exportation et d'exportations de pétrole",sep=""),
-       caption="Source: Donnés de l'ONE, figure par Andrew Leach.")
+  labs(y="Capacit? ou quantit? pr?vue (mm bar/j)",x="Ann?e",
+       title=paste("Pr?visions de la capacit? pipelini?re canadienne d'exportation et d'exportations de p?trole",sep=""),
+       caption="Source: Donn?s de l'ONE, figure par Andrew Leach.")
 if(png==1)#set these to only turn on if you're making PNG graphs
   dev.off()
 
@@ -766,7 +762,7 @@ ggplot(df1) +
   geom_line(aes(Year,CAPP.2018.Offtake*6.2929/1000, colour = "test2" ),size=3) +
   #geom_point(size=1) +
   #scale_color_viridis("",discrete=TRUE,option="D",labels="Expected Export Demand")+
-  scale_colour_manual("",labels=c("Pétrole disponible pour l'exportation (ONE,2016)","Pétrole disponible pour l'exportation (ACPP,2018)","Pétrole disponible pour l'exportation (ACPP,2014)"),values=c("Black","Grey40","Firebrick"))+
+  scale_colour_manual("",labels=c("P?trole disponible pour l'exportation (ONE,2016)","P?trole disponible pour l'exportation (ACPP,2018)","P?trole disponible pour l'exportation (ACPP,2014)"),values=c("Black","Grey40","Firebrick"))+
   #scale_fill_viridis("",discrete=TRUE,option="D")+
   scale_fill_manual("",values = mkColor(df1$Pipeline),guide = "legend",labels=pipes_french_real)+
   guides(colour = guide_legend(order = 1,nrow = (2)), 
@@ -774,9 +770,9 @@ ggplot(df1) +
   scale_y_continuous(expand = c(0, 0)) +
   scale_x_continuous(expand = c(0, 0)) +
   theme_classic()+slide_theme()+
-  labs(y="Capacité ou quantité prévue (mm bar/j)",x="Année",
-       title=paste("Prévisions de la capacité pipelinière canadienne d'exportation et d'exportations de pétrole",sep=""),
-       caption="Source: Donnés de l'ONE, figure par Andrew Leach.")
+  labs(y="Capacit? ou quantit? pr?vue (mm bar/j)",x="Ann?e",
+       title=paste("Pr?visions de la capacit? pipelini?re canadienne d'exportation et d'exportations de p?trole",sep=""),
+       caption="Source: Donn?s de l'ONE, figure par Andrew Leach.")
 if(png==1)#set these to only turn on if you're making PNG graphs
   dev.off()
 

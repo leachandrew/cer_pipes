@@ -5,18 +5,19 @@ names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
         "Keystone","MNP","Trans-Mountain","TQM","TCPLmainline","Westcoast")
 
 #https://www.neb-one.gc.ca/open/energy/throughput-capacity/nbridge-mainline-throughput-and-capacity-dataset.csv
-names<-c("Enbridge-mainline","Keystone","Trans-Mountain")
+#https://open.canada.ca/data/en/dataset/dc343c43-a592-4a27-8ee7-c77df56afb34/resource/4db7bc7c-d9cc-468b-8130-e799b13c69e8
+#https://www.cer-rec.gc.ca/open/energy/throughput-capacity/keystone-throughput-and-capacity.csvnames<-c("Enbridge-mainline","Keystone","Trans-Mountain")
 
 wb <- createWorkbook()
 data_store <- list()
 
 for(pipe in names){
   #file_name<-paste("https://www.neb-one.gc.ca/open/energy/throughput-capacity/",pipe,"-throughput-and-capacity-dataset.csv",sep="")
-  file_name<-paste("https://www.neb-one.gc.ca/open/energy/throughput-capacity/",pipe,"-throughput-and-capacity-dataset.csv",sep="") 
+  file_name<-paste("https://www.cer-rec.gc.ca/open/energy/throughput-capacity/",pipe,"-throughput-and-capacity-dataset.csv",sep="") 
   
   download.file(file_name,"neb-data.csv",mode="wb")
   var_name<-paste(pipe,"_data",sep="")
-  pipe_data <- read.csv(file = "neb-data.csv")
+  pipe_data <- read_csv(file = "neb-data.csv")
 #TEMPORARY ENBRIDGE DATA
   #  if(pipe=="Enbridge-Mainline")
   #   pipe_data <- read.csv(file = "enb_temp.csv")
