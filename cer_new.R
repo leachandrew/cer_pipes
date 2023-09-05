@@ -44,8 +44,8 @@ oil_export<-pipe_data %>% filter(pipe_name %in% oil_export)%>% filter(key_point 
   group_by(date,pipeline,product,label)%>%
   summarize(throughput=sum(throughput_1000_m3_d))%>%
   ggplot(aes(date,throughput,group = interaction(product,pipeline),fill=pipeline,alpha=product)) +
-  geom_area(position = "stack",,color="black",linewidth=.25) +
-  scale_alpha_manual("Grades denoted by fill shading, e.g. for Enbridge Mainline:",values=c(.7,1,.3))+
+  geom_area(position = "stack",color="black",linewidth=.25) +
+  scale_alpha_manual("Grades denoted by fill shading, e.g. for Enbridge Mainline:",values=c(.7,.5,1,.3))+
   scale_fill_manual("",values=viridis(n=3,alpha=1,begin=.7,end=0,option = "E",direction=-1))+
   scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
   scale_y_continuous(expand = c(0, 0),
@@ -87,8 +87,8 @@ oil_export%>% filter(year>=2007)%>%
   summarize(throughput=sum(throughput_1000_m3_d))%>%
   ggplot(aes(date,throughput,group = product,fill=product)) +
   geom_area(position = "stack",color="black",linewidth=.25) +
-  scale_alpha_manual("Grades denoted by fill shading, e.g. for Enbridge Mainline:",values=c(.7,1,.3))+
-  scale_fill_manual("",values=viridis(n=3,alpha=1,begin=.7,end=0,option = "E",direction=-1))+
+  scale_alpha_manual("Grades denoted by fill shading, e.g. for Enbridge Mainline:",values=c(.7,.5,1,.3))+
+  scale_fill_manual("",values=viridis(n=4,alpha=1,begin=.7,end=0,option = "E",direction=-1))+
   scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
   scale_y_continuous(expand = c(0, 0),
                      sec.axis = sec_axis( trans=~.*1/.16, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
