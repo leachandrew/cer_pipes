@@ -407,6 +407,101 @@ pipe_data %>% filter(pipe_name == "ngtl",key_point=="East Gate")%>%
 ggsave("ngtl_east.png",dpi=300,bg="white",width = 15,height = 8)
 
 
+# Apportionment
+
+file_name<-"https://www.cer-rec.gc.ca/open/energy/throughput-capacity/apportionment.csv"
+
+
+
+#inv_file<-"http://ecccdocs.techno-science.ca/documents/ECCC_STB_SRAD_GHG_ECON_NS_1990-2016_prelim_EN.xlsx"
+download.file(file_name,"neb-oil-app-data.csv")
+oil_apportion <- read.csv(file = "neb-oil-app-data.csv")%>% clean_names()%>%
+  rename(apportionment=apportionment_percentage,
+         orig_noms=original_nominations_1000_m3_d)%>%
+  mutate(date=ymd(date),
+         apportionment=apportionment*100,
+  )
+
+oil_apportion%>%#filter(pipeline %in% c("Trans Mountain Pipeline"))%>%
+  filter(pipeline %in% c("Enbridge Canadian Mainline","Trans Mountain Pipeline","Keystone Pipeline"))%>%
+  filter(!is.na(apportionment))%>%
+  filter(!(pipeline =="Enbridge Canadian Mainline" & key_point!="system"))%>%
+  ggplot() +
+  geom_line(aes(date,apportionment,group = pipeline,colour=pipeline),size=1.75) +
+  #geom_point(size=1) +
+  scale_color_viridis("",discrete=TRUE,option="D")+
+  scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  expand_limits(y=100)+
+  theme_classic() +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
+        axis.line.x = element_line(color = "gray"),
+        axis.line.y = element_line(color = "gray"),
+        axis.text = element_text(size = 12),
+        axis.text.x = element_text(margin = margin(t = 10)),
+        axis.title = element_text(size = 12),
+        #axis.label.x = element_text(size=20,vjust=+5),
+        plot.subtitle = element_text(size = 12,hjust=0.5),
+        plot.caption = element_text(face="italic",size = 12,hjust=0),
+        legend.key.width=unit(2,"line"),
+        legend.position = "bottom",
+        #legend.direction = "horizontal",
+        #legend.box = "horizontal",
+        legend.text = element_text(size = 12),
+        plot.title = element_text(hjust=0.5,size = 14))+
+  labs(y="Approtionment share (%)",x="Date",
+       title=paste("Canadian Common Carrier Pipeline Apportionment",sep=""),
+       caption="Source: NEB Data, graph by Andrew Leach.")
+ggsave("apportioned_pipes.png",dpi=300,bg="white",width = 15,height = 8)
+
+
+#test<-
+oil_apportion%>%#filter(pipeline %in% c("Trans Mountain Pipeline"))%>%
+  filter((pipeline == c("Enbridge Canadian Mainline")& grepl("Kerrobert - ",key_point))|
+           (pipeline == "Keystone Pipeline")|
+           (pipeline == "Trans Mountain Pipeline")     )%>%
+  group_by(date,pipeline)%>%
+  summarize(avg_app=sum(apportionment/100*orig_noms)/sum(orig_noms,na.rm=T)*100
+         )%>%
+  mutate(
+    key_point=ifelse(pipeline=="Enbridge Canadian Mainline","Enbridge Canadian Mainline, Kerrobert (weighted avg.)",pipeline))%>%
+I()%>%
+  
+    ggplot() +
+  geom_col(aes(date,avg_app),fill="dodgerblue",linewidth=0.2) +
+  #geom_point(size=1) +
+  scale_fill_viridis("",discrete=TRUE,option="D")+
+  scale_x_date(name=NULL,date_breaks = "2 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  #expand_limits(y=100)+
+  theme_classic() +
+  facet_wrap(~key_point)+
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
+        axis.line.x = element_line(color = "gray"),
+        axis.line.y = element_line(color = "gray"),
+        axis.text = element_text(size = 12),
+        axis.text.x = element_text(margin = margin(t = 10)),
+        axis.title = element_text(size = 12),
+        #axis.label.x = element_text(size=20,vjust=+5),
+        plot.subtitle = element_text(size = 12,hjust=0.5),
+        plot.caption = element_text(face="italic",size = 12,hjust=0),
+        legend.key.width=unit(2,"line"),
+        legend.position = "bottom",
+        #legend.direction = "horizontal",
+        #legend.box = "horizontal",
+        legend.text = element_text(size = 12),
+        plot.title = element_text(hjust=0.5,size = 14))+
+  labs(y="Approtionment share (%)",x="Date",
+       title=paste("Canadian Common Carrier Pipeline Apportionment",sep=""),
+       caption="Source: CER Data, graph by Andrew Leach.")
+ggsave("apportioned_points.png",dpi=300,bg="white",width = 15,height = 8)
+
+
+
 
 
 
@@ -724,58 +819,6 @@ if(png==1)#set these to only turn on if you're making PNG graphs
   dev.off()
 
 
-file_name<-"https://www.neb-one.gc.ca/open/energy/throughput-capacity/Apportionment-dataset.csv"
-
-
-
-#inv_file<-"http://ecccdocs.techno-science.ca/documents/ECCC_STB_SRAD_GHG_ECON_NS_1990-2016_prelim_EN.xlsx"
-download.file(file_name,"neb-oil-app-data.csv")
-oil_apportion <- read.csv(file = "neb-oil-app-data.csv")
-oil_apportion$Date<-as.Date(paste(oil_apportion$Year,oil_apportion$Month,1,sep="-"))
-df1<-oil_apportion %>% filter()
-df1$nominations_bbls<-as.numeric(as.character(df1$Accepted.Nominations..1000.m3.d.))*6.2929
-df1$apportionment<-gsub("%","",df1$Apportionment.Percentage)
-df1$apportionment<-as.numeric(as.character(df1$apportionment))*100
-
-png<-1
-lims=c(min(df1$Date),max(df1$Date)+months(3))
-if(png==1)#set these to only turn on if you're making PNG graphs
-  set_png("apportion.png")
-ggplot(filter(df1,Pipeline.Name %in% c("Trans Mountain Pipeline","Keystone Pipeline System",
-"Canadian Mainline"))) +
-  geom_line(aes(Date,apportionment,group = Pipeline.Name,colour=Pipeline.Name),size=1.75) +
-  #geom_point(size=1) +
-  scale_color_viridis("",discrete=TRUE,option="D")+
-  #scale_colour_brewer(NULL,labels=c("Gasoline Exports","Gasoline Imports","Net Gasoline Exports"),type = "seq", palette = "Paired", direction = 1)+
-  #scale_x_date(date_breaks = "1 year", date_labels =  "%Y",limits=c(max(as.Date("2000-01-01"),min(df1$date)),Sys.Date()),expand=c(0,0)) +
-  #scale_colour_manual(labels=c("Gasoline Exports","Gasoline Imports","Net Gasoline Exports",values=c("#41ae76","#238b45","#006d2c","#00441b","Black","Black","Black","Black"))+
-  #scale_y_continuous(limits=c(min(df1$value),max(df1$value)),expand=c(0,0))+
-  #scale_y_continuous(limits=c(min(df1$value),max(df1$value)),expand=c(0,0))+
-  scale_x_date(name=NULL,date_breaks = "1 year", limits=lims,date_labels =  "%b\n%Y",expand=c(0,0)) +
-  scale_y_continuous(expand = c(0, 0)) +
-  theme_classic() +
-  theme(panel.border = element_blank(),
-        panel.grid = element_blank(),
-        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
-        axis.line.x = element_line(color = "gray"),
-        axis.line.y = element_line(color = "gray"),
-        axis.text = element_text(size = 12),
-        axis.text.x = element_text(margin = margin(t = 10)),
-        axis.title = element_text(size = 12),
-        #axis.label.x = element_text(size=20,vjust=+5),
-        plot.subtitle = element_text(size = 12,hjust=0.5),
-        plot.caption = element_text(face="italic",size = 12,hjust=0),
-        legend.key.width=unit(2,"line"),
-        legend.position = "bottom",
-        #legend.direction = "horizontal",
-        #legend.box = "horizontal",
-        legend.text = element_text(size = 12),
-        plot.title = element_text(hjust=0.5,size = 14))+
-  labs(y="Approtionment share (%)",x="Date",
-       title=paste("Canadian Common Carrier Pipeline Approtionment",sep=""),
-       caption="Source: NEB Data, graph by Andrew Leach.")
-if(png==1)#set these to only turn on if you're making PNG graphs
-  dev.off()
 
 #crude_by_rail_exports
 #https://www.neb-one.gc.ca/nrg/sttstc/crdlndptrlmprdct/stt/cndncrdlxprtsrl-eng.xls
