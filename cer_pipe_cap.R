@@ -6,21 +6,35 @@ library(RColorBrewer)
 
 
 #PIPE CAPACITIES
+library(openxlsx)
+
+# Energy Futures Supply
+
+if(!file.exists("cer.figs.xlsx"))
+  download.file("https://www.cer-rec.gc.ca/en/data-analysis/canada-energy-future/2023/figures.xlsx",destfile = "cer_figs.xlsx",mode="wb")
+
+cer_supply<-read_xlsx("cer_figs.xlsx",sheet="R.33",skip = 5)%>%clean_names()%>%select(-unit,-"total_pipeline_capacity_and_structural_rail")
+
+
+#PIPE CAPACITIES
 
 #pipe_capacity_data <- read.xlsx(xlsxFile = "C:/Users/aleach/Google Drive/Reports/NEB/EF2016FigureData.xlsx", sheet = "10.7", startRow = 3,skipEmptyRows = TRUE,detectDates = TRUE)
 pipe_capacity_data <- read.xlsx(xlsxFile = "pipes_capacity.xlsx", sheet = "2020_mods", startRow = 3,skipEmptyRows = TRUE,detectDates = TRUE)
 names(pipe_capacity_data)[1]<-"Year"
 names(pipe_capacity_data)[grep("Western.Refinery.Runs.Net.Burnaby",names(pipe_capacity_data))]<-"Western.Refinery.Runs"
 #names(pipe_capacity_data)[grep("2016.NEB.Western.Canadian.Pipeline.Demand",names(pipe_capacity_data))]<-"2016.NEB.Western.Canadian.Pipeline.Demand"
-pipe_capacity_data<-pipe_capacity_data%>% select(-`2014.CAPP.Supply.Raw`,-`2018.CAPP.Supply.Raw`)%>%
-  mutate(CAPP.2019.Offtake=CAPP.2019.Supply.Raw/6.2929-Western.Refinery.Runs+Enbridge.Bakken.Volumes)%>%
-  select(-CAPP.2019.Supply.Raw)%>%
-  select(-CER.2019.Supply.Available)
+pipe_capacity_data$`2014.CAPP.Supply.Raw`<-NULL
+pipe_capacity_data$`2018.CAPP.Supply.Raw`<-NULL
 
+pipe_capacity_data$`CAPP.2019.Offtake`<-pipe_capacity_data$CAPP.2019.Supply.Raw/6.2929- pipe_capacity_data$Western.Refinery.Runs+pipe_capacity_data$Enbridge.Bakken.Volumes
+pipe_capacity_data$`2019.CAPP.Supply.Raw`<-NULL
 
+pipe_capacity_data$CER.2019.Supply.Available<-NULL
 
-df1<-pipe_capacity_data%>% pivot_longer(cols=-c("Year","CER.2021.Evolving","CER.2021.Current","CER.2021.Total.Capacity","CER.2020.Reference","CER.2020.Evolving","NEB.2016.Offtake","CAPP.2019.Offtake","CAPP.2018.Offtake","CAPP.2014.Offtake","TM.Ref.Prod","Western.Refinery.Runs","Enbridge.Bakken.Volumes","CER.2019.Mod"),
-                                        values_to = "Capacity",names_to = "Pipeline")
+pipe_capacity_data <- pipe_capacity_data %>% left_join(cer_supply,by=c("Year"="year"))
+
+df1<-pipe_capacity_data%>%pivot_longer(cols=c("Enbridge.Mainline","Express","Trans.Mountain","Keystone","Rangeland/Milk.River","Keystone.XL","Trans.Mountain.Expansion","Northern.Gateway","Energy.East"), names_to = "Pipeline",values_to =  "Capacity")
+
 expansions<-c("Keystone.XL","Trans.Mountain.Expansion","Northern.Gateway","Energy.East")
 df1<-filter(df1,!(Pipeline %in% expansions))%>%
   mutate(Pipeline=factor(Pipeline,levels=
@@ -85,8 +99,9 @@ if(png==1)#set these to only turn on if you're making PNG graphs
   dev.off()
 
 
-df1<-pipe_capacity_data%>% pivot_longer(cols=-c("Year","CER.2021.Evolving","CER.2021.Current","CER.2021.Total.Capacity","CER.2020.Reference","CER.2020.Evolving","NEB.2016.Offtake","CAPP.2019.Offtake","CAPP.2018.Offtake","CAPP.2014.Offtake","TM.Ref.Prod","Western.Refinery.Runs","Enbridge.Bakken.Volumes","CER.2019.Mod"),
-                                        values_to = "Capacity",names_to = "Pipeline")
+df1<-pipe_capacity_data%>%
+  pivot_longer(cols=c("Enbridge.Mainline","Express","Trans.Mountain","Keystone","Rangeland/Milk.River","Keystone.XL","Trans.Mountain.Expansion","Northern.Gateway","Energy.East"), 
+               names_to = "Pipeline",values_to =  "Capacity")
 
 
 expansions<-c("Trans.Mountain.Expansion","Keystone.XL","Northern.Gateway","Energy.East")
@@ -114,17 +129,20 @@ pipes<-ggplot(df1) +
   #geom_line(aes(Year,CAPP.2019.Offtake*6.2929/1000, colour = "test3" ),size=3) +
   geom_line(aes(Year,CAPP.2014.Offtake*6.2929/1000, linetype = "test0"),size=1.5,color="black") +
   #geom_line(aes(Year, CER.2019.Mod *6.2929/1000, colour = "test1",linetype = "test1" ),size=1.5)+
-  geom_line(aes(Year,CER.2021.Current/1000, linetype = "test2"),size=1.5,color="black") +
-  geom_line(aes(Year,CER.2021.Evolving/1000, linetype = "test3"),size=1.5,color="black") +
+  geom_line(aes(Year,CER.2021.Current/1000, linetype = "test1"),size=1.5,color="black") +
+  geom_line(aes(Year,CER.2021.Evolving/1000, linetype = "test2"),size=1.5,color="black") +
+  geom_line(aes(Year,total_supply_available_for_export_current_measures, linetype = "test3"),size=1.5,color="black") +
+  geom_line(aes(Year,total_supply_available_for_export_canada_net_zero, linetype = "test4"),size=1.5,color="black") +
+  geom_line(aes(Year,total_supply_available_for_export_global_net_zero, linetype = "test5"),size=1.5,color="black") +
   scale_linetype_manual("Export demand based on:\n",
-                        labels=rev(c("CER (2021) Evolving Policies Case","CER (2021) Current Policies Case","CAPP (2014) Forecast")),
-                        values=rev(c("11","33","solid")))+
-  guides(colour = guide_legend(order = 1,nrow = (4)), linetype = guide_legend(order = 1,nrow = (4)),
+                        labels=rev(c("CER (2023) Global Net-Zero","CER (2023) Canada Net-Zero","CER (2023) Current Measures","CER (2021) Evolving Policies Case","CER (2021) Current Policies Case","CAPP (2014) Forecast")),
+                        values=rev(c("31","3111","22","11","dotted","solid")))+
+  guides(colour = guide_legend(order = 1,nrow = (3)), linetype = guide_legend(order = 1,nrow = (3)),
          fill = guide_legend(order = 2,nrow = (4)))+
   scale_y_continuous(expand = c(0, 0)) +
   scale_x_continuous(expand = c(0, 0)) +
   theme_classic()+slide_theme()+
-  theme(legend.key.width = unit(2,"cm"))+
+  theme(legend.key.width = unit(1.9,"cm"))+
   #ajl_line()+
   labs(y="Export Capacity or Demand (million bbl/d)",x="",
        #caption="Source: CER and CAPP Data, graph by Andrew Leach.",
@@ -134,7 +152,7 @@ pipes<-ggplot(df1) +
 pipes+scale_fill_manual("",values = my_palette,guide = "legend")
 ggsave("pipe_capacity_real.png",height = 10,width = 16,dpi = 600)
 
-my_palette<-c("white",grey.colors(n=7,end=0.85,start = 0.3))
+my_palette<-c("white",grey.colors(n=7,end=0.2,start = 0.9))
 pipes+scale_fill_manual("",values = my_palette,guide = "legend")
 ggsave("pipe_capacity_real_bw.png",height = 10,width = 16,dpi = 600)
 ggsave("pipe_capacity_real_bw.pdf",height = 10,width = 16,dpi = 600)

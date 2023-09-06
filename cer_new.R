@@ -2,6 +2,8 @@ library(tidyverse)
 library(lubridate)
 library(janitor)
 library(viridis)
+library(readxl)
+library(RColorBrewer)
 names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
         "Keystone","MNP","Trans-Mountain","TQM","tcpl-mainline","Westcoast","ngtl")
 #pipe<-"Keystone"
@@ -423,11 +425,12 @@ oil_apportion <- read.csv(file = "neb-oil-app-data.csv")%>% clean_names()%>%
   )
 
 oil_apportion%>%#filter(pipeline %in% c("Trans Mountain Pipeline"))%>%
-  filter(pipeline %in% c("Enbridge Canadian Mainline","Trans Mountain Pipeline","Keystone Pipeline"))%>%
-  filter(!is.na(apportionment))%>%
+  filter(str_to_lower(pipeline) %in% c("enbridge canadian mainline","trans mountain pipeline","keystone pipeline"))%>%
+  #filter(!is.na(apportionment))%>%
   filter(!(pipeline =="Enbridge Canadian Mainline" & key_point!="system"))%>%
+  mutate(apportionment=coalesce(apportionment,0))%>%
   ggplot() +
-  geom_line(aes(date,apportionment,group = pipeline,colour=pipeline),size=1.75) +
+  geom_line(aes(date,apportionment,group = pipeline,colour=pipeline),size=1.5) +
   #geom_point(size=1) +
   scale_color_viridis("",discrete=TRUE,option="D")+
   scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
@@ -459,9 +462,10 @@ ggsave("apportioned_pipes.png",dpi=300,bg="white",width = 15,height = 8)
 
 #test<-
 oil_apportion%>%#filter(pipeline %in% c("Trans Mountain Pipeline"))%>%
-  filter((pipeline == c("Enbridge Canadian Mainline")& grepl("Kerrobert - ",key_point))|
-           (pipeline == "Keystone Pipeline")|
-           (pipeline == "Trans Mountain Pipeline")     )%>%
+  filter((str_to_lower(pipeline) == c("enbridge canadian mainline")& grepl("Kerrobert - ",key_point))|
+           (str_to_lower(pipeline) == "keystone pipeline")|
+           (str_to_lower(pipeline) == "trans mountain pipeline")     )%>%
+  mutate(apportionment=coalesce(apportionment,0))%>%
   group_by(date,pipeline)%>%
   summarize(avg_app=sum(apportionment/100*orig_noms)/sum(orig_noms,na.rm=T)*100
          )%>%
@@ -911,17 +915,20 @@ test_df<-data.frame(mysheets[2],stringsAsFactors = F)
 https://s21.q4cdn.com/736796105/files/doc_downloads/key-metrics/weekly/2019/03/02/CP-53-Week-Railway-Performance-Report.xlsx
 https://s21.q4cdn.com/736796105/files/doc_downloads/key-metrics/weekly/2019/03/02/CP-Weekly-RTMs-and-Carloads.xlsx
 
+library(openxlsx)
 
+# Energy Futures Supply
 
+if(!file.exists("cer.figs.xlsx"))
+   download.file("https://www.cer-rec.gc.ca/en/data-analysis/canada-energy-future/2023/figures.xlsx",destfile = "cer_figs.xlsx",mode="wb")
 
-
-
+cer_supply<-read_xlsx("cer_figs.xlsx",sheet="R.33",skip = 5)%>%clean_names()%>%select(-unit,-"total_pipeline_capacity_and_structural_rail")
 
 
 #PIPE CAPACITIES
 
 #pipe_capacity_data <- read.xlsx(xlsxFile = "C:/Users/aleach/Google Drive/Reports/NEB/EF2016FigureData.xlsx", sheet = "10.7", startRow = 3,skipEmptyRows = TRUE,detectDates = TRUE)
-pipe_capacity_data <- read.xlsx(xlsxFile = "../../pipes_capacity.xlsx", sheet = "2020_mods", startRow = 3,skipEmptyRows = TRUE,detectDates = TRUE)
+pipe_capacity_data <- read.xlsx(xlsxFile = "pipes_capacity.xlsx", sheet = "2020_mods", startRow = 3,skipEmptyRows = TRUE,detectDates = TRUE)
 names(pipe_capacity_data)[1]<-"Year"
 names(pipe_capacity_data)[grep("Western.Refinery.Runs.Net.Burnaby",names(pipe_capacity_data))]<-"Western.Refinery.Runs"
 #names(pipe_capacity_data)[grep("2016.NEB.Western.Canadian.Pipeline.Demand",names(pipe_capacity_data))]<-"2016.NEB.Western.Canadian.Pipeline.Demand"
@@ -933,7 +940,9 @@ pipe_capacity_data$`2019.CAPP.Supply.Raw`<-NULL
 
 pipe_capacity_data$CER.2019.Supply.Available<-NULL
 
-df1<-melt(pipe_capacity_data,id=c("Year","CER.2020.Reference","CER.2020.Evolving","CAPP.2019.Supply.Raw","NEB.2016.Offtake","CAPP.2019.Offtake","CAPP.2018.Offtake","CAPP.2014.Offtake","TM.Ref.Prod","Western.Refinery.Runs","Enbridge.Bakken.Volumes","CER.2019.Mod"), value.name = "Capacity",variable.name = "Pipeline")
+pipe_capacity_data <- pipe_capacity_data %>% left_join(cer_supply,by=c("Year"="year"))
+
+df1<-pipe_capacity_data%>%pivot_longer(cols=c("Enbridge.Mainline","Express","Trans.Mountain","Keystone","Rangeland/Milk.River","Keystone.XL","Trans.Mountain.Expansion","Northern.Gateway","Energy.East"), names_to = "Pipeline",values_to =  "Capacity")
 expansions<-c("Keystone.XL","Trans.Mountain.Expansion","Northern.Gateway","Energy.East")
 df1<-filter(df1,!(Pipeline %in% expansions))
 df1$Pipeline<-factor(df1$Pipeline,levels=

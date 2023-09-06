@@ -1126,7 +1126,7 @@ if(png==1)#set these to only turn on if you're making PNG graphs
   dev.off()
 
 
-
+library(cansim)
 commod_list<-c("Gasoline and aviation turbine fuel", 
                "Fuel oils and crude petroleum",
                "Gaseous hydrocarbons, including liquid petroleum gas (LPG's)",
