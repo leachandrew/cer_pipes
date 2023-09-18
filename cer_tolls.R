@@ -79,7 +79,7 @@ tolls<-c( "Uncommitted","Committed, 10 yr Term, Total Contract",
 
 mainline_tolls %>% #select(path,service) %>% distinct()
   filter(grepl("Edmonton Terminal, Alberta", path)) %>% 
-  filter(grepl("Sarnia", path)) %>% 
+  filter(grepl("Nanticoke", path)) %>% 
   mutate(date=ymd(date),product=as_factor(str_to_title(product)),
          product=fct_recode(product,"Condensate"="Cnd"),
          product=fct_relevel(product,"Light",after = 3),
@@ -88,7 +88,7 @@ mainline_tolls %>% #select(path,service) %>% distinct()
   ggplot(aes(date,toll,group = interaction(service,product),color=product)) +
   geom_line(linewidth=1.25)+
   facet_wrap(~path)+
-  expand_limits(y=c(10,20))+
+  expand_limits(y=c(0,50))+
   scale_color_viridis("Product:",discrete = T, option="B",end=0.8)+
   #scale_linetype_manual("Service Term:",values=c("solid","11","31"))+
   scale_x_date(name=NULL,date_breaks = "2 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
