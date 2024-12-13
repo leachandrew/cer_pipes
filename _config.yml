@@ -11,10 +11,10 @@ remote_theme: daattali/beautiful-jekyll
 
 
 navbar-links:
-  Pipelines: "canada"
-  Tolls: "provinces"
-  Approtionment: "econ_sectors"
-  Crude-by-Rail: "ipcc_sectors"
+  Pipelines: "index"
+#  Tolls: "provinces"
+#  Approtionment: "econ_sectors"
+#  Crude-by-Rail: "ipcc_sectors"
   Github: "https://github.com/leachandrew/cer_pipes"
 
 # --- Logo --- #
