@@ -1,8 +1,10 @@
 library(tidyverse)
 library(lubridate)
 library(openxlsx)
+library(janitor)
+library(viridis)
 names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
-        "Keystone","MNP","Trans-Mountain","TQM","TCPLmainline","Westcoast")
+         "Keystone","MNP","Trans-Mountain","TQM","tcpl-mainline","Westcoast","ngtl")
 
 #https://www.neb-one.gc.ca/open/energy/throughput-capacity/nbridge-mainline-throughput-and-capacity-dataset.csv
 #https://open.canada.ca/data/en/dataset/dc343c43-a592-4a27-8ee7-c77df56afb34/resource/4db7bc7c-d9cc-468b-8130-e799b13c69e8
@@ -11,27 +13,45 @@ names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
 wb <- createWorkbook()
 data_store <- list()
 
-for(pipe in names){
-  #file_name<-paste("https://www.neb-one.gc.ca/open/energy/throughput-capacity/",pipe,"-throughput-and-capacity-dataset.csv",sep="")
-  file_name<-paste("https://www.cer-rec.gc.ca/open/energy/throughput-capacity/",pipe,"-throughput-and-capacity-dataset.csv",sep="") 
+get_pipe_data<-function(pipe_name="Enbridge-Mainline",skip_test=TRUE){
+  names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
+           "Keystone","MNP","Trans-Mountain","TQM","tcpl-mainline","Westcoast","ngtl")
+  pipe_data<-"No data"
   
-  download.file(file_name,"neb-data.csv",mode="wb")
-  var_name<-paste(pipe,"_data",sep="")
-  pipe_data <- read_csv(file = "neb-data.csv")
-#TEMPORARY ENBRIDGE DATA
-  #  if(pipe=="Enbridge-Mainline")
-  #   pipe_data <- read.csv(file = "enb_temp.csv")
-  if(! "Date" %in% names(pipe_data))
-    pipe_data$Date<-as.Date(paste(pipe_data$Year,pipe_data$Month,1,sep="-"))
-  if(! "Nameplate.Capacity..1000.m3.day." %in% names(pipe_data))
-    pipe_data[,"Nameplate.Capacity..1000.m3.day."]<-pipe_data$Capacity..1000.m3.d.  
-  names(pipe_data)[grep("Throughput",names(pipe_data))]<-"Throughput"
-  names(pipe_data)[grep("Nameplate",names(pipe_data))]<-"Nameplate_Capacity"
-  names(pipe_data)[grep("Capacity..",names(pipe_data))]<-"Actual_Capacity"
-  #ENB      Throughput..1000.m3.d.	Nameplate.Capacity..1000.m3.day.	Capacity..1000.m3.d.
-  #Keystone Throughput.1000m3.day	  Nameplate.Capacity..1000.m3.day.  Capacity..1000.m3.d.
-  #TransMtn Throughput.1000.m3.d	  Nameplate.Capacity..1000.m3.day.  Capacity..1000.m3.d.	
-  assign(var_name,pipe_data)
+  if(pipe_name %in% names)
+  {
+    file_name<-paste("https://www.cer-rec.gc.ca/open/energy/throughput-capacity/",pipe_name,"-throughput-and-capacity.csv",sep="") 
+    local_file<-paste(pipe_name,".csv",sep="")
+    skip_file<-TRUE
+    if(skip_test==TRUE)
+      if (file.exists(local_file)) {
+      # Get file information
+      file_info <- file.info(local_file)
+      # Get the last modification time
+      mod_time <- file_info$mtime
+      # Check if the file was modified in the last 24 hours
+      if (difftime(Sys.time(), mod_time, units = "hours") <= 24) {
+      skip_file<-FALSE
+      message("The file exists and was created/modified in the last day so not downloading.")
+      } else {
+        message("The file exists but was not created/modified in the last day.")
+      }
+    } else {
+      message("The file does not exist.")
+    }
+    if(skip_file)
+    download.file(file_name,local_file,mode="wb")
+    pipe_data <- read_csv(file = local_file)%>%clean_names()%>%mutate(pipe_name=pipe_name)
+  }
+  pipe_data
+}
+
+#get_pipe_data(skip_test = TRUE)
+
+wb <- createWorkbook()
+data_store <- list()
+for(pipe in names){
+  pipe_data <- get_pipe_data(pipe)
   addWorksheet(wb, pipe)
   writeData(wb, sheet = pipe, x = pipe_data)
   data_store[[pipe]]<-pipe_data
@@ -40,6 +60,114 @@ for(pipe in names){
 #write.xlsx(wb,file = "2018NIR_prelim.xlsx")
 saveWorkbook(wb,"NEB_pipe_data.xlsx",overwrite = TRUE)
 
+pipe_data <- bind_rows(data_store, .id = "pipe_name")%>%
+  mutate(product=as_factor(str_to_title(product)))
+
+pipe_plot_theme<-function(){
+  theme_classic() +
+    theme(panel.border = element_blank(),
+          panel.grid = element_blank(),
+          panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
+          axis.line.x = element_line(color = "gray"),
+          axis.line.y = element_line(color = "gray"),
+          axis.text = element_text(size = 12),
+          axis.text.x = element_text(margin = margin(t = 10)),
+          axis.title = element_text(size = 12),
+          #axis.label.x = element_text(size=20,vjust=+5),
+          plot.subtitle = element_text(size = 12,hjust=0.5),
+          plot.caption = element_text(face="italic",size = 12,hjust=0),
+          legend.key.width=unit(2,"line"),
+          legend.position = "bottom",
+          legend.box = "vertical",
+          #legend.direction = "horizontal",
+          #legend.box = "horizontal",
+          legend.text = element_text(size = 12),
+          plot.title = element_text(hjust=0.5,size = 14))
+}
+
+#TM_dest
+pipe_data%>%filter(pipe_name=="Trans-Mountain",key_point!="system")%>%
+ggplot(aes(date,throughput_1000_m3_d,group = product,fill=product)) +
+  geom_area(position = "stack",,color="black",linewidth=.25) +
+  scale_fill_manual("",values=viridis(n=4,alpha=1,begin=.7,end=0,option = "E",direction=-1))+
+  scale_x_date(name=NULL,date_breaks = "2 years", date_labels =  "%b\n%Y",expand=c(0,0)) +
+  scale_y_continuous(expand = c(0, 0),
+                     
+                     sec.axis = sec_axis( trans=~.*1/.16, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
+  guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=.8,end=0,option = "E",direction=-1)[1]),order = 10) ,
+         fill = guide_legend(order = 1) )+
+  pipe_plot_theme()+
+  facet_wrap(~key_point,ncol = 1, scales = "free_y")+
+  labs(y="Shipments (Monthly, Thousands of Cubic Metres per Day)",x="Date",
+       title=paste("Trans-Mountain Pipeline Shipments by Product and Destination",sep=""),
+       caption="Source: CER Data for Trans-Mountain, graph by Andrew Leach.")
+
+#TM_products
+pipe_data%>%filter(pipe_name=="Trans-Mountain",key_point!="system")%>%
+  group_by(product,date)%>%
+  summarize(throughput_1000_m3_d=sum(throughput_1000_m3_d,na.rm=T))%>%
+  ggplot(aes(date,throughput_1000_m3_d,group = product,fill=product)) +
+  geom_area(position = "stack",,color="black",linewidth=.25) +
+  scale_fill_manual("",values=viridis(n=4,alpha=1,begin=.9,end=0,option = "H",direction=-1))+
+  scale_x_date(name=NULL,date_breaks = "2 years", date_labels =  "%b\n%Y",expand=c(0,0)) +
+  scale_y_continuous(expand = c(0, 0),
+                     
+                     sec.axis = sec_axis( trans=~.*1/.16, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
+  guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=.8,end=0,option = "E",direction=-1)[1]),order = 10) ,
+         fill = guide_legend(order = 1) )+
+  pipe_plot_theme()+
+  labs(y="Shipments (Monthly, Thousands of Cubic Metres per Day)",x="Date",
+       title=paste("Trans-Mountain Pipeline Shipments by Product (All Destinations)",sep=""),
+       caption="Source: CER Data for Trans-Mountain, graph by Andrew Leach.")
+
+
+
+plot_pipeline_data <- function(pipe_data, pipe_name, key_points,title_sent) {
+  pipe_data %>%
+    filter(pipe_name %in% !!pipe_name, key_point %in% !!key_points) %>%
+    mutate(
+      pipe_name=gsub("-"," ",pipe_name),
+      pair=as_factor(str_to_title(paste(pipe_name,key_point,sep=", "))))%>%
+    ggplot(aes(date, throughput_1000_m3_d, group = product, fill = product)) +
+    geom_area(position = "stack", color = "black", linewidth = 0.25) +
+    scale_fill_manual(
+      "",
+      values = viridis(n = 4, alpha = 1, begin = 0.7, end = 0, option = "E", direction = -1)
+    ) +
+    scale_x_date(
+      name = NULL,
+      date_breaks = "2 years",
+      date_labels = "%b\n%Y",
+      expand = c(0, 0)
+    ) +
+    scale_y_continuous(
+      expand = c(0, 0),
+      sec.axis = sec_axis(
+        trans = ~.*1 / 0.16,
+        name = "Shipments (Monthly, Thousands of Barrels per Day)"
+      )
+    ) +
+    guides(
+      alpha = guide_legend(
+        override.aes = list(fill = viridis(n = 3, alpha = 1, begin = 0.8, end = 0, option = "E", direction = -1)[1]),
+        order = 10
+      ),
+      fill = guide_legend(order = 1)
+    ) +
+    pipe_plot_theme() + # Assuming this is a custom theme function
+    facet_wrap(~pair, ncol = 1, 
+               scales = "fixed") +
+    labs(
+      y = "Shipments (Monthly, Thousands of Cubic Metres per Day)",
+      x = "Date",
+      title = title_sent,
+      caption = "Source: CER Data, graph by Andrew Leach."
+    )
+}
+
+plot_pipeline_data(pipe_data,pipe_name = c("Trans-Mountain","Keystone","Enbridge-Mainline"),
+                   key_point = c("Sumas","International boundary at or near Haskett, Manitoba","ex-Gretna"),
+                   title_sent="Pipeline Throughput at Major Export Points by Product (All Destinations)")
 #ALL EXPORTS
 
 col_int<-c("Pipeline.Name","Key.Point","Product","Throughput","Actual_Capacity","Nameplate_Capacity","Date")

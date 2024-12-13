@@ -1,0 +1,427 @@
+﻿Date,Month,Year,Company,Pipeline,Key Point,Latitude,Longitude,Direction Of Flow,Trade Type,Product,Throughput (1000 m3/d),Nameplate Capacity (1000 m3/d),Available Capacity (1000 m3/d),Reason For Variance
+2007-01-01,1,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.573223276484229,7.155,5.473684210526316,A
+2007-02-01,2,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.274023314330223,7.155,5.473684210526316,A
+2007-03-01,3,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.693615300814499,7.155,5.473684210526316,A
+2007-04-01,4,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.4976292801793325,7.155,5.473684210526316,A
+2007-05-01,5,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.2892770218030676,7.155,5.473684210526316,A
+2007-06-01,6,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.304735356866455,7.155,5.473684210526316,A
+2007-07-01,7,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.237798006681574,7.155,5.473684210526316,A
+2007-08-01,8,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.04401022271911,7.155,5.473684210526316,A
+2007-09-01,9,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.0697316572759936,7.155,5.473684210526316,A
+2007-10-01,10,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.9606065371956434,7.155,5.473684210526316,A
+2007-11-01,11,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.1790129797469,7.155,5.473684210526316,A
+2007-12-01,12,2007,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.36221450169434,7.155,5.473684210526316,A
+2008-01-01,1,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.183901727292893,7.155,5.473684210526316,A
+2008-02-01,2,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.1684466380994434,7.155,5.473684210526316,A
+2008-03-01,3,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.0106881218395865,7.155,5.473684210526316,A
+2008-04-01,4,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.278282933849602,7.155,5.473684210526316,A
+2008-05-01,5,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.034650988573768,7.155,5.473684210526316,A
+2008-06-01,6,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.021298911502703,7.155,5.473684210526316,A
+2008-07-01,7,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.7890937304991095,7.155,5.473684210526316,A
+2008-08-01,8,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.2912069604302854,7.155,5.473684210526316,A
+2008-09-01,9,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.1371166370387917,7.155,5.473684210526316,A
+2008-10-01,10,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.088627951015437,7.155,5.473684210526316,A
+2008-11-01,11,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.023713378757393,7.155,5.473684210526316,A
+2008-12-01,12,2008,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.9673935956120827,7.155,5.473684210526316,A
+2009-01-01,1,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.8609661940910813,7.155,5.473684210526316,A
+2009-02-01,2,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.9815395247675514,7.155,5.473684210526316,A
+2009-03-01,3,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.9919083344286332,7.155,5.473684210526316,A
+2009-04-01,4,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.0274114488385058,7.155,5.473684210526316,A
+2009-05-01,5,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.0748214669899996,7.155,5.473684210526316,A
+2009-06-01,6,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.0042609098394277,7.155,5.473684210526316,A
+2009-07-01,7,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.9232309197345465,7.155,5.473684210526316,A
+2009-08-01,8,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.863147863843577,7.155,5.473684210526316,A
+2009-09-01,9,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.916329614115103,7.155,5.473684210526316,A
+2009-10-01,10,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.6064627991023057,7.155,5.473684210526316,A
+2009-11-01,11,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.785861674974245,7.155,5.473684210526316,A
+2009-12-01,12,2009,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.3969082144744833,7.155,5.473684210526316,A
+2010-01-01,1,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.1677092840248164,7.155,5.473684210526316,A
+2010-02-01,2,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.2977301622111765,7.155,5.473684210526316,A
+2010-03-01,3,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.152525701651161,7.155,5.473684210526316,A
+2010-04-01,4,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.057205774667408,7.155,5.473684210526316,A
+2010-05-01,5,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.2783270405852303,7.155,5.473684210526316,A
+2010-06-01,6,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.0425188771678853,7.155,5.473684210526316,A
+2010-07-01,7,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3294114365811573,7.155,5.473684210526316,A
+2010-08-01,8,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.0936496642327342,7.155,5.473684210526316,A
+2010-09-01,9,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.09435322045469,7.155,5.473684210526316,A
+2010-10-01,10,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.1770339858234817,7.155,5.473684210526316,A
+2010-11-01,11,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.908749387499205,7.155,5.473684210526316,A
+2010-12-01,12,2010,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.0046691660874885,7.155,5.473684210526316,A
+2011-01-01,1,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.022606622425357,7.155,5.473684210526316,A
+2011-02-01,2,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.8764937628980283,7.155,5.473684210526316,A
+2011-03-01,3,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.878858467919285,7.155,5.473684210526316,A
+2011-04-01,4,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.7516255964705882,7.155,5.473684210526316,A
+2011-05-01,5,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.2308729424328426,7.155,2.947368421052632,A
+2011-06-01,6,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.596490133391733,7.155,2.947368421052632,A
+2011-07-01,7,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7878926035759778,7.155,2.947368421052632,A
+2011-08-01,8,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.8712026967579873,7.155,2.947368421052632,A
+2011-09-01,9,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.759976184876312,7.155,3.2,A
+2011-10-01,10,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.515023081502337,7.155,3.2,A
+2011-11-01,11,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.6560106922451507,7.155,2.947368421052632,A
+2011-12-01,12,2011,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.5150876279447214,7.155,2.947368421052632,A
+2012-01-01,1,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.557607596863641,7.155,2.947368421052632,A
+2012-02-01,2,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.74729022709062,7.155,2.947368421052632,A
+2012-03-01,3,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.281080955734245,7.155,2.947368421052632,A
+2012-04-01,4,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,3.089287508079173,7.155,3.1,A
+2012-05-01,5,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.459225909385501,7.155,2.736842105263158,A
+2012-06-01,6,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.6436582244117646,7.155,2.736842105263158,A
+2012-07-01,7,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.3648299647244517,7.155,2.736842105263158,A
+2012-08-01,8,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.0312313592411924,7.155,2.6315789473684212,A
+2012-09-01,9,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.7957396473615264,7.155,2.7,A
+2012-10-01,10,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.305463374343911,7.155,2.6315789473684212,A
+2012-11-01,11,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.522998224768204,7.155,2.7,A
+2012-12-01,12,2012,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.5637136903129414,7.155,2.6315789473684212,A
+2013-01-01,1,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.2389063102820668,7.155,2.6315789473684212,A
+2013-02-01,2,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.9288201295743879,7.155,2.6315789473684212,A
+2013-03-01,3,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.0426399429321465,7.155,2.6315789473684212,A
+2013-04-01,4,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.6292347839745625,7.155,2.6315789473684212,A
+2013-05-01,5,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.0358302932608905,7.155,2.6315789473684212,A
+2013-06-01,6,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.3214035485996822,7.155,2.6315789473684212,A
+2013-07-01,7,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.431151434271606,7.155,2.6315789473684212,A
+2013-08-01,8,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.15925277306097,7.155,2.6315789473684212,A
+2013-09-01,9,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.1426729435612084,7.155,2.6315789473684212,A
+2013-10-01,10,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.0865379783959144,7.155,2.6315789473684212,A
+2013-11-01,11,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.210271356893482,7.155,2.6315789473684212,A
+2013-12-01,12,2013,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.1945015852455962,7.155,2.6315789473684212,A
+2014-01-01,1,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.144439364534388,7.155,2.6315789473684212,A
+2014-02-01,2,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.1133532215758506,7.155,2.6315789473684212,A
+2014-03-01,3,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.3890348806175674,7.155,2.6315789473684212,A
+2014-04-01,4,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.22062621991256,7.155,2.6315789473684212,A
+2014-05-01,5,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.091388643540906,7.155,2.6315789473684212,A
+2014-06-01,6,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.20637952915008,7.155,2.6315789473684212,A
+2014-07-01,7,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.3531244673985374,7.155,2.6315789473684212,A
+2014-08-01,8,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.274868360655008,7.155,2.6315789473684212,A
+2014-09-01,9,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.648490857737679,7.155,2.6315789473684212,A
+2014-10-01,10,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.2271007659704614,7.155,2.7,A
+2014-11-01,11,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.194073749910016,7.155,2.6315789473684212,A
+2014-12-01,12,2014,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.1574616092848804,7.155,2.6315789473684212,A
+2015-01-01,1,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.060044891120366,7.155,2.6315789473684212,A
+2015-02-01,2,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.012412959226327,7.155,2.6315789473684212,A
+2015-03-01,3,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.20567457442186,7.155,2.6315789473684212,A
+2015-04-01,4,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.009990631137043,7.155,2.6315789473684212,A
+2015-05-01,5,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.0481683457221465,7.155,2.6315789473684212,A
+2015-06-01,6,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.933397993791097,7.155,2.6315789473684212,A
+2015-07-01,7,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7366814561903688,7.155,2.6315789473684212,A
+2015-08-01,8,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.017651110496296,7.155,2.6315789473684212,A
+2015-09-01,9,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.067581011000636,7.155,2.6315789473684212,A
+2015-10-01,10,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.171394475244499,7.155,2.6315789473684212,A
+2015-11-01,11,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.047306756142194,7.155,2.6315789473684212,A
+2015-12-01,12,2015,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.130484423691479,7.155,2.6315789473684212,A
+2016-01-01,1,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.8325154544028937,7.155,2.6315789473684212,A
+2016-02-01,2,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.081774228374213,7.155,2.6315789473684212,A
+2016-03-01,3,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.916277372681574,7.155,2.6315789473684212,A
+2016-04-01,4,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.7932321668372022,7.155,2.6315789473684212,A
+2016-05-01,5,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.011218734780763,7.155,2.6315789473684212,A
+2016-06-01,6,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.7612438106120827,7.155,2.6315789473684212,A
+2016-07-01,7,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,2.2515348217340385,7.155,2.526315789473684,A
+2016-08-01,8,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.7561021485893644,7.155,2.526315789473684,A
+2016-09-01,9,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.6866120941856917,7.155,2.526315789473684,A
+2016-10-01,10,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.9268726711985213,7.155,2.526315789473684,A
+2016-11-01,11,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.4549633035154212,7.155,2.526315789473684,"A, B"
+2016-12-01,12,2016,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.505046865737423,7.155,2.526315789473684,"A, B"
+2017-01-01,1,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.2,7.155,2.526315789473684,"A, B"
+2017-02-01,2,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.23,7.155,2.526315789473684,"A, B"
+2017-03-01,3,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.16,7.155,2.526315789473684,"A, B"
+2017-04-01,4,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.3,7.155,2.526315789473684,"A, B"
+2017-05-01,5,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.33,7.155,2.526315789473684,"A, B"
+2017-06-01,6,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.35,7.155,2.526315789473684,"A, B"
+2017-07-01,7,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.3,7.155,2.526315789473684,"A, B"
+2017-08-01,8,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.3,7.155,2.526315789473684,"A, B"
+2017-09-01,9,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.1,7.155,2.526315789473684,"A, B"
+2017-10-01,10,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.1,7.2,2.5,"A, B"
+2017-11-01,11,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.1,7.2,2.5,"A, B"
+2017-12-01,12,2017,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.1,7.2,2.5,"A, B"
+2018-01-01,1,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.108467741935484,7.2,2.6,"A,B"
+2018-02-01,2,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.0840714285714286,7.2,2.6,"A,B"
+2018-03-01,3,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.0630612903225806,7.2,2.6,"A,B"
+2018-04-01,4,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.03,7.2,2.6,"A,B"
+2018-05-01,5,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.1,7.2,2.6,"A,B"
+2018-06-01,6,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.1,7.2,2.6,"A,B"
+2018-07-01,7,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.1,7.2,2.6,"A,B"
+2018-08-01,8,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.1,7.2,2.6,"A,B"
+2018-09-01,9,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.1,7.2,2.6,"A,B"
+2018-10-01,10,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.43,7.2,2.6,A
+2018-11-01,11,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.98,7.2,2.6,A
+2018-12-01,12,2018,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.61,7.2,2.6,A
+2019-01-01,1,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3,7.155,2.6,A
+2019-02-01,2,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.2,7.155,2.6,A
+2019-03-01,3,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.5,7.155,2.6,A
+2019-04-01,4,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3489883333333335,7.2,2.6,"A,B"
+2019-05-01,5,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.2563893225806453,7.2,2.6,"A,B"
+2019-06-01,6,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.5944609666666665,7.2,2.6,"A,B"
+2019-07-01,7,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.2,7.2,2.6,A
+2019-08-01,8,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.8,7.2,2.6,A
+2019-09-01,9,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.4,7.2,2.6,A
+2019-10-01,10,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.179858064516129,7.2,2.6,A
+2019-11-01,11,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3801233333333331,7.2,2.6,A
+2019-12-01,12,2019,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3712516129032257,7.2,2.6,A
+2020-01-01,1,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.5583806451612905,7.2,2.6,A
+2020-02-01,2,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.4093862068965517,7.2,2.6,A
+2020-03-01,3,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.4194000000000002,7.2,2.6,A
+2020-04-01,4,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.1968433333333335,7.2,2.6,A
+2020-05-01,5,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.6759774193548387,7.2,2.6,A
+2020-06-01,6,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3525600000000002,7.2,2.6,A
+2020-07-01,7,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.1774774193548387,7.2,2.6,A
+2020-08-01,8,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.05535483870967742,7.2,2.6,A
+2020-09-01,9,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.060450000000000004,7.2,2.6,A
+2020-10-01,10,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.0,7.2,2.6,A
+2020-11-01,11,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.4530537666666667,7.2,2.6,A
+2020-12-01,12,2020,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3067636451612905,7.2,2.6,A
+2021-01-01,1,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.0918967741935486,7.2,2.6,A
+2021-02-01,2,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3913107142857142,7.2,2.6,A
+2021-03-01,3,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.1098903225806451,7.2,2.6,A
+2021-04-01,4,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3064466666666668,7.2,2.6,A
+2021-05-01,5,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.338,7.2,2.6,A
+2021-06-01,6,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.51886,7.2,2.6,A
+2021-07-01,7,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.6,7.2,2.6,A
+2021-08-01,8,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.2,7.2,2.6,A
+2021-09-01,9,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3,7.2,2.6,A
+2021-10-01,10,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.454267741935484,7.2,2.6,A
+2021-11-01,11,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.5747533333333332,7.2,2.6,A
+2021-12-01,12,2021,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.280974193548387,7.2,2.6,A
+2022-01-01,1,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.153667741935484,7.2,2.6,A
+2022-02-01,2,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3271607142857142,7.2,2.6,A
+2022-03-01,3,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.2453419354838708,7.2,2.6,A
+2022-04-01,4,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.4933133333333333,7.2,2.6,A
+2022-05-01,5,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.0230290322580646,7.2,2.6,A
+2022-06-01,6,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.3341,7.2,2.6,A
+2022-07-01,7,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.4,7.2,2.6,A
+2022-08-01,8,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.1,7.2,2.6,A
+2022-09-01,9,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.0,7.2,2.6,A
+2022-10-01,10,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.9370741935483871,7.2,2.6,A
+2022-11-01,11,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,1.0049966666666668,7.2,2.6,A
+2022-12-01,12,2022,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.8843774193548387,7.2,2.6,A
+2023-01-01,1,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.9934709677419354,7.2,2.6,A
+2023-02-01,2,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.48853214285714286,7.2,2.6,A
+2023-03-01,3,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.6833870967741935,7.2,2.6,A
+2023-04-01,4,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7329766666666667,7.2,2.6,A
+2023-05-01,5,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.9634258064516129,7.2,2.6,A
+2023-06-01,6,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7886266666666667,7.2,2.6,A
+2023-07-01,7,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7208967741935484,7.2,2.6,A
+2023-08-01,8,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.9658935483870968,7.2,2.6,A
+2023-09-01,9,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.66049,7.2,2.6,A
+2023-10-01,10,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.9024645161290323,7.2,2.6,A
+2023-11-01,11,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.9108400000000001,7.2,2.6,A
+2023-12-01,12,2023,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7835903225806452,7.2,2.6,A
+2024-01-01,1,2024,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.5437685161290323,7.2,2.6,A
+2024-02-01,2,2024,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7780443793103448,7.2,2.6,A
+2024-03-01,3,2024,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.8886267741935483,7.2,2.6,A
+2024-04-01,4,2024,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.731549,7.2,2.6,A
+2024-05-01,5,2024,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7638247741935483,7.2,2.6,A
+2024-06-01,6,2024,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.8051786333333333,7.2,2.6,A
+2024-07-01,7,2024,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7603868064516128,7.2,2.6,A
+2024-08-01,8,2024,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.934805064516129,7.2,2.6,A
+2024-09-01,9,2024,Enbridge Pipelines (NW) Inc.,"Enbridge Norman Wells pipeline
+",Zama,59.067,-118.852,south,intracanada,domestic light,0.7805450333333332,7.2,2.6,A

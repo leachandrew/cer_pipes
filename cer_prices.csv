@@ -1,0 +1,829 @@
+"","Scenario","Variable","Year","Value"
+"1","Current Measures","Brent - 2022 US$/bbl",2005,80.8665756264198
+"2","Current Measures","Brent - 2022 US$/bbl",2006,93.5456355215549
+"3","Current Measures","Brent - 2022 US$/bbl",2007,101.095032141505
+"4","Current Measures","Brent - 2022 US$/bbl",2008,130.315020512094
+"5","Current Measures","Brent - 2022 US$/bbl",2009,83.262915326185
+"6","Current Measures","Brent - 2022 US$/bbl",2010,105.633733989938
+"7","Current Measures","Brent - 2022 US$/bbl",2011,143.135843691189
+"8","Current Measures","Brent - 2022 US$/bbl",2012,140.694974846012
+"9","Current Measures","Brent - 2022 US$/bbl",2013,134.848792714513
+"10","Current Measures","Brent - 2022 US$/bbl",2014,120.982067039344
+"11","Current Measures","Brent - 2022 US$/bbl",2015,63.3786749727695
+"12","Current Measures","Brent - 2022 US$/bbl",2016,52.463337464405
+"13","Current Measures","Brent - 2022 US$/bbl",2017,63.7320769987563
+"14","Current Measures","Brent - 2022 US$/bbl",2018,81.8328285263673
+"15","Current Measures","Brent - 2022 US$/bbl",2019,72.6518989303432
+"16","Current Measures","Brent - 2022 US$/bbl",2020,46.4711179883946
+"17","Current Measures","Brent - 2022 US$/bbl",2021,75.8521205164993
+"18","Current Measures","Brent - 2022 US$/bbl",2022,100.94
+"19","Current Measures","Brent - 2022 US$/bbl",2023,85
+"20","Current Measures","Brent - 2022 US$/bbl",2024,80
+"21","Current Measures","Brent - 2022 US$/bbl",2025,79.1666666666667
+"22","Current Measures","Brent - 2022 US$/bbl",2026,78.3333333333333
+"23","Current Measures","Brent - 2022 US$/bbl",2027,77.5
+"24","Current Measures","Brent - 2022 US$/bbl",2028,76.6666666666667
+"25","Current Measures","Brent - 2022 US$/bbl",2029,75.8333333333334
+"26","Current Measures","Brent - 2022 US$/bbl",2030,75
+"27","Current Measures","Brent - 2022 US$/bbl",2031,75
+"28","Current Measures","Brent - 2022 US$/bbl",2032,75
+"29","Current Measures","Brent - 2022 US$/bbl",2033,75
+"30","Current Measures","Brent - 2022 US$/bbl",2034,75
+"31","Current Measures","Brent - 2022 US$/bbl",2035,75
+"32","Current Measures","Brent - 2022 US$/bbl",2036,75
+"33","Current Measures","Brent - 2022 US$/bbl",2037,75
+"34","Current Measures","Brent - 2022 US$/bbl",2038,75
+"35","Current Measures","Brent - 2022 US$/bbl",2039,75
+"36","Current Measures","Brent - 2022 US$/bbl",2040,75
+"37","Current Measures","Brent - 2022 US$/bbl",2041,75
+"38","Current Measures","Brent - 2022 US$/bbl",2042,75
+"39","Current Measures","Brent - 2022 US$/bbl",2043,75
+"40","Current Measures","Brent - 2022 US$/bbl",2044,75
+"41","Current Measures","Brent - 2022 US$/bbl",2045,75
+"42","Current Measures","Brent - 2022 US$/bbl",2046,75
+"43","Current Measures","Brent - 2022 US$/bbl",2047,75
+"44","Current Measures","Brent - 2022 US$/bbl",2048,75
+"45","Current Measures","Brent - 2022 US$/bbl",2049,75
+"46","Current Measures","Brent - 2022 US$/bbl",2050,75
+"47","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2005,65.7579446012748
+"48","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2006,74.3952768227681
+"49","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2007,82.3612303338737
+"50","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2008,110.793138099574
+"51","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2009,66.8933553332186
+"52","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2010,87.1363563637734
+"53","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2011,111.477519963389
+"54","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2012,100.300214698307
+"55","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2013,104.66530554729
+"56","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2014,97.9250801991823
+"57","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2015,69.5929831266362
+"58","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2016,63.3302290379649
+"59","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2017,72.7811846819254
+"60","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2018,78.7070695937494
+"61","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2019,77.7671165578603
+"62","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2020,50.5954436433972
+"63","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2021,85.9314966663854
+"64","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2022,119.73
+"65","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2023,103.95
+"66","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2024,96.285
+"67","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2025,96.4166666666667
+"68","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2026,94.6
+"69","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2027,92.8
+"70","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2028,91.7333333333334
+"71","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2029,90.6666666666667
+"72","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2030,88.9
+"73","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2031,88.9
+"74","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2032,88.2
+"75","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2033,88.9
+"76","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2034,88.9
+"77","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2035,88.9
+"78","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2036,89.6
+"79","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2037,89.6
+"80","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2038,90.3
+"81","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2039,90.3
+"82","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2040,90.3
+"83","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2041,90.3
+"84","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2042,91
+"85","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2043,91
+"86","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2044,91
+"87","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2045,91
+"88","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2046,91
+"89","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2047,90.3
+"90","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2048,90.3
+"91","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2049,90.3
+"92","Current Measures","Canadian Light Sweet (CLS) - 2022 US$/bbl",2050,89.6
+"93","Current Measures","Henry Hub - 2022 US$/MMBtu",2005,12.5999507828116
+"94","Current Measures","Henry Hub - 2022 US$/MMBtu",2006,9.45888665761374
+"95","Current Measures","Henry Hub - 2022 US$/MMBtu",2007,9.52643642374702
+"96","Current Measures","Henry Hub - 2022 US$/MMBtu",2008,11.6655123513011
+"97","Current Measures","Henry Hub - 2022 US$/MMBtu",2009,5.29331774606107
+"98","Current Measures","Henry Hub - 2022 US$/MMBtu",2010,5.70987463721634
+"99","Current Measures","Henry Hub - 2022 US$/MMBtu",2011,5.05689356459457
+"100","Current Measures","Henry Hub - 2022 US$/MMBtu",2012,3.42444088304015
+"101","Current Measures","Henry Hub - 2022 US$/MMBtu",2013,4.55027031859492
+"102","Current Measures","Henry Hub - 2022 US$/MMBtu",2014,5.21450968557224
+"103","Current Measures","Henry Hub - 2022 US$/MMBtu",2015,3.18589287420458
+"104","Current Measures","Henry Hub - 2022 US$/MMBtu",2016,3.01058475161537
+"105","Current Measures","Henry Hub - 2022 US$/MMBtu",2017,3.51844368955468
+"106","Current Measures","Henry Hub - 2022 US$/MMBtu",2018,3.61990464623026
+"107","Current Measures","Henry Hub - 2022 US$/MMBtu",2019,2.90201088360245
+"108","Current Measures","Henry Hub - 2022 US$/MMBtu",2020,2.26280569720415
+"109","Current Measures","Henry Hub - 2022 US$/MMBtu",2021,4.18369010043042
+"110","Current Measures","Henry Hub - 2022 US$/MMBtu",2022,6.42
+"111","Current Measures","Henry Hub - 2022 US$/MMBtu",2023,3.2
+"112","Current Measures","Henry Hub - 2022 US$/MMBtu",2024,3.7
+"113","Current Measures","Henry Hub - 2022 US$/MMBtu",2025,3.75
+"114","Current Measures","Henry Hub - 2022 US$/MMBtu",2026,3.75
+"115","Current Measures","Henry Hub - 2022 US$/MMBtu",2027,3.75
+"116","Current Measures","Henry Hub - 2022 US$/MMBtu",2028,3.75
+"117","Current Measures","Henry Hub - 2022 US$/MMBtu",2029,3.75
+"118","Current Measures","Henry Hub - 2022 US$/MMBtu",2030,3.75
+"119","Current Measures","Henry Hub - 2022 US$/MMBtu",2031,3.7825
+"120","Current Measures","Henry Hub - 2022 US$/MMBtu",2032,3.815
+"121","Current Measures","Henry Hub - 2022 US$/MMBtu",2033,3.8475
+"122","Current Measures","Henry Hub - 2022 US$/MMBtu",2034,3.88
+"123","Current Measures","Henry Hub - 2022 US$/MMBtu",2035,3.9125
+"124","Current Measures","Henry Hub - 2022 US$/MMBtu",2036,3.945
+"125","Current Measures","Henry Hub - 2022 US$/MMBtu",2037,3.9775
+"126","Current Measures","Henry Hub - 2022 US$/MMBtu",2038,4.01
+"127","Current Measures","Henry Hub - 2022 US$/MMBtu",2039,4.0425
+"128","Current Measures","Henry Hub - 2022 US$/MMBtu",2040,4.075
+"129","Current Measures","Henry Hub - 2022 US$/MMBtu",2041,4.1075
+"130","Current Measures","Henry Hub - 2022 US$/MMBtu",2042,4.14
+"131","Current Measures","Henry Hub - 2022 US$/MMBtu",2043,4.1725
+"132","Current Measures","Henry Hub - 2022 US$/MMBtu",2044,4.205
+"133","Current Measures","Henry Hub - 2022 US$/MMBtu",2045,4.2375
+"134","Current Measures","Henry Hub - 2022 US$/MMBtu",2046,4.27
+"135","Current Measures","Henry Hub - 2022 US$/MMBtu",2047,4.3025
+"136","Current Measures","Henry Hub - 2022 US$/MMBtu",2048,4.335
+"137","Current Measures","Henry Hub - 2022 US$/MMBtu",2049,4.3675
+"138","Current Measures","Henry Hub - 2022 US$/MMBtu",2050,4.4
+"139","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2005,10.5804306456603
+"140","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2006,8.09234759308421
+"141","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2007,8.17115565357305
+"142","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2008,9.18440214557235
+"143","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2009,4.14068627428696
+"144","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2010,4.53472657673113
+"145","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2011,4.16320286299805
+"146","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2012,2.6658497137102
+"147","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2013,3.37512225810971
+"148","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2014,4.35459386704237
+"149","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2015,2.55522539221494
+"150","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2016,1.96599309784067
+"151","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2017,1.99140111063038
+"152","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2018,1.35249184584427
+"153","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2019,1.5282231621323
+"154","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2020,1.86335003372447
+"155","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2021,3.11583262722593
+"156","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2022,4.17692307692308
+"157","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2023,2.22
+"158","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2024,2.45
+"159","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2025,2.66
+"160","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2026,2.77
+"161","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2027,2.79
+"162","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2028,2.92
+"163","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2029,2.97
+"164","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2030,3
+"165","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2031,3.0325
+"166","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2032,3.075
+"167","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2033,3.1075
+"168","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2034,3.14
+"169","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2035,3.1725
+"170","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2036,3.205
+"171","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2037,3.2375
+"172","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2038,3.27
+"173","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2039,3.3025
+"174","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2040,3.335
+"175","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2041,3.3675
+"176","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2042,3.4
+"177","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2043,3.4325
+"178","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2044,3.465
+"179","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2045,3.4975
+"180","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2046,3.53
+"181","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2047,3.5625
+"182","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2048,3.595
+"183","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2049,3.6275
+"184","Current Measures","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2050,3.66
+"185","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2005,83.8725402193511
+"186","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2006,94.7953061950207
+"187","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2007,100.959932609239
+"188","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2008,133.895158117158
+"189","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2009,83.5443726850737
+"190","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2010,105.464859574605
+"191","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2011,122.544423314893
+"192","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2012,119.045274800294
+"193","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2013,122.003078854833
+"194","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2014,114.046957716327
+"195","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2015,58.9571886644627
+"196","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2016,51.9715686404359
+"197","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2017,59.7664732416328
+"198","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2018,74.7768874064137
+"199","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2019,64.352373640663
+"200","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2020,43.662117812555
+"201","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2021,72.984527301882
+"202","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2022,94.91
+"203","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2023,80
+"204","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2024,76
+"205","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2025,76.6666666666667
+"206","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2026,75.8333333333333
+"207","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2027,75
+"208","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2028,74.1666666666667
+"209","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2029,73.3333333333334
+"210","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2030,72.5
+"211","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2031,72.5
+"212","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2032,72.5
+"213","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2033,72.5
+"214","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2034,72.5
+"215","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2035,72.5
+"216","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2036,72.5
+"217","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2037,72.5
+"218","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2038,72.5
+"219","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2039,72.5
+"220","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2040,72.5
+"221","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2041,72.5
+"222","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2042,72.5
+"223","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2043,72.5
+"224","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2044,72.5
+"225","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2045,72.5
+"226","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2046,72.5
+"227","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2047,72.5
+"228","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2048,72.5
+"229","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2049,72.5
+"230","Current Measures","West Texas Intermediate (WTI) - 2022 US$/bbl",2050,72.5
+"231","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2005,54.3307758303938
+"232","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2006,65.3548664552633
+"233","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2007,69.9433316597046
+"234","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2008,107.483199559043
+"235","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2009,70.6085924705493
+"236","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2010,87.0800648919957
+"237","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2011,101.243730394196
+"238","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2012,93.3088139035118
+"239","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2013,91.7070087440543
+"240","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2014,88.4906295292333
+"241","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2015,42.4262053085169
+"242","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2016,35.0722346674421
+"243","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2017,45.4763599082138
+"244","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2018,46.2675968702545
+"245","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2019,49.8964862436196
+"246","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2020,29.6056373661847
+"247","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2021,58.8327407882522
+"248","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2022,78.1846153846154
+"249","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2023,63
+"250","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2024,61
+"251","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2025,64.1666666666667
+"252","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2026,63.3333333333333
+"253","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2027,62.5
+"254","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2028,61.6666666666667
+"255","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2029,60.8333333333334
+"256","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2030,60
+"257","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2031,60
+"258","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2032,60
+"259","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2033,60
+"260","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2034,60
+"261","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2035,60
+"262","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2036,60
+"263","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2037,60
+"264","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2038,60
+"265","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2039,60
+"266","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2040,60
+"267","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2041,60
+"268","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2042,60
+"269","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2043,60
+"270","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2044,60
+"271","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2045,60
+"272","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2046,60
+"273","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2047,60
+"274","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2048,60
+"275","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2049,60
+"276","Current Measures","Western Canadian Select (WCS) - 2022 US$/bbl",2050,60
+"277","Canada Net-zero","Brent - 2022 US$/bbl",2005,80.8665756264198
+"278","Canada Net-zero","Brent - 2022 US$/bbl",2006,93.5456355215549
+"279","Canada Net-zero","Brent - 2022 US$/bbl",2007,101.095032141505
+"280","Canada Net-zero","Brent - 2022 US$/bbl",2008,130.315020512094
+"281","Canada Net-zero","Brent - 2022 US$/bbl",2009,83.262915326185
+"282","Canada Net-zero","Brent - 2022 US$/bbl",2010,105.633733989938
+"283","Canada Net-zero","Brent - 2022 US$/bbl",2011,143.135843691189
+"284","Canada Net-zero","Brent - 2022 US$/bbl",2012,140.694974846012
+"285","Canada Net-zero","Brent - 2022 US$/bbl",2013,134.848792714513
+"286","Canada Net-zero","Brent - 2022 US$/bbl",2014,120.982067039344
+"287","Canada Net-zero","Brent - 2022 US$/bbl",2015,63.3786749727695
+"288","Canada Net-zero","Brent - 2022 US$/bbl",2016,52.463337464405
+"289","Canada Net-zero","Brent - 2022 US$/bbl",2017,63.7320769987563
+"290","Canada Net-zero","Brent - 2022 US$/bbl",2018,81.8328285263673
+"291","Canada Net-zero","Brent - 2022 US$/bbl",2019,72.6518989303432
+"292","Canada Net-zero","Brent - 2022 US$/bbl",2020,46.4711179883946
+"293","Canada Net-zero","Brent - 2022 US$/bbl",2021,75.8521205164993
+"294","Canada Net-zero","Brent - 2022 US$/bbl",2022,100.94
+"295","Canada Net-zero","Brent - 2022 US$/bbl",2023,85
+"296","Canada Net-zero","Brent - 2022 US$/bbl",2024,80
+"297","Canada Net-zero","Brent - 2022 US$/bbl",2025,77.3333333333333
+"298","Canada Net-zero","Brent - 2022 US$/bbl",2026,74.6666666666667
+"299","Canada Net-zero","Brent - 2022 US$/bbl",2027,72
+"300","Canada Net-zero","Brent - 2022 US$/bbl",2028,69.3333333333333
+"301","Canada Net-zero","Brent - 2022 US$/bbl",2029,66.6666666666666
+"302","Canada Net-zero","Brent - 2022 US$/bbl",2030,64
+"303","Canada Net-zero","Brent - 2022 US$/bbl",2031,63.8
+"304","Canada Net-zero","Brent - 2022 US$/bbl",2032,63.6
+"305","Canada Net-zero","Brent - 2022 US$/bbl",2033,63.4
+"306","Canada Net-zero","Brent - 2022 US$/bbl",2034,63.2
+"307","Canada Net-zero","Brent - 2022 US$/bbl",2035,63
+"308","Canada Net-zero","Brent - 2022 US$/bbl",2036,62.8
+"309","Canada Net-zero","Brent - 2022 US$/bbl",2037,62.6
+"310","Canada Net-zero","Brent - 2022 US$/bbl",2038,62.4
+"311","Canada Net-zero","Brent - 2022 US$/bbl",2039,62.2
+"312","Canada Net-zero","Brent - 2022 US$/bbl",2040,62
+"313","Canada Net-zero","Brent - 2022 US$/bbl",2041,61.8
+"314","Canada Net-zero","Brent - 2022 US$/bbl",2042,61.6
+"315","Canada Net-zero","Brent - 2022 US$/bbl",2043,61.4
+"316","Canada Net-zero","Brent - 2022 US$/bbl",2044,61.2
+"317","Canada Net-zero","Brent - 2022 US$/bbl",2045,61
+"318","Canada Net-zero","Brent - 2022 US$/bbl",2046,60.8
+"319","Canada Net-zero","Brent - 2022 US$/bbl",2047,60.6
+"320","Canada Net-zero","Brent - 2022 US$/bbl",2048,60.3999999999999
+"321","Canada Net-zero","Brent - 2022 US$/bbl",2049,60.1999999999999
+"322","Canada Net-zero","Brent - 2022 US$/bbl",2050,60
+"323","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2005,65.7579446012748
+"324","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2006,74.3952768227681
+"325","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2007,82.3612303338737
+"326","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2008,110.793138099574
+"327","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2009,66.8933553332186
+"328","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2010,87.1363563637734
+"329","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2011,111.477519963389
+"330","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2012,100.300214698307
+"331","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2013,104.66530554729
+"332","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2014,97.9250801991823
+"333","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2015,69.5929831266362
+"334","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2016,63.3302290379649
+"335","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2017,72.7811846819254
+"336","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2018,78.7070695937494
+"337","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2019,77.7671165578603
+"338","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2020,50.5954436433972
+"339","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2021,85.9314966663854
+"340","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2022,119.73
+"341","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2023,103.95
+"342","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2024,96.285
+"343","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2025,94.0333333333333
+"344","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2026,89.87
+"345","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2027,86.43
+"346","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2028,82.3466666666666
+"347","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2029,79.55
+"348","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2030,76.11
+"349","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2031,75.852
+"350","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2032,75.594
+"351","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2033,75.92
+"352","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2034,75.66
+"353","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2035,75.98
+"354","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2036,76.296
+"355","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2037,76.032
+"356","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2038,76.342
+"357","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2039,76.076
+"358","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2040,75.81
+"359","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2041,76.112
+"360","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2042,75.844
+"361","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2043,75.576
+"362","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2044,75.308
+"363","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2045,75.0399999999999
+"364","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2046,74.7719999999999
+"365","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2047,74.5039999999999
+"366","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2048,73.6819999999999
+"367","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2049,73.4159999999999
+"368","Canada Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2050,72.6
+"369","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2005,12.5999507828116
+"370","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2006,9.45888665761374
+"371","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2007,9.52643642374702
+"372","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2008,11.6655123513011
+"373","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2009,5.29331774606107
+"374","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2010,5.70987463721634
+"375","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2011,5.05689356459457
+"376","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2012,3.42444088304015
+"377","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2013,4.55027031859492
+"378","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2014,5.21450968557224
+"379","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2015,3.18589287420458
+"380","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2016,3.01058475161537
+"381","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2017,3.51844368955468
+"382","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2018,3.61990464623026
+"383","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2019,2.90201088360245
+"384","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2020,2.26280569720415
+"385","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2021,4.18369010043042
+"386","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2022,6.42
+"387","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2023,3.2
+"388","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2024,3.7
+"389","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2025,3.75
+"390","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2026,3.74
+"391","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2027,3.73
+"392","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2028,3.72
+"393","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2029,3.71
+"394","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2030,3.7
+"395","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2031,3.645
+"396","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2032,3.59
+"397","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2033,3.535
+"398","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2034,3.48
+"399","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2035,3.425
+"400","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2036,3.37
+"401","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2037,3.315
+"402","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2038,3.26
+"403","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2039,3.205
+"404","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2040,3.15
+"405","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2041,3.095
+"406","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2042,3.04
+"407","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2043,2.985
+"408","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2044,2.93
+"409","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2045,2.875
+"410","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2046,2.82
+"411","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2047,2.765
+"412","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2048,2.71
+"413","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2049,2.655
+"414","Canada Net-zero","Henry Hub - 2022 US$/MMBtu",2050,2.6
+"415","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2005,10.5804306456603
+"416","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2006,8.09234759308421
+"417","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2007,8.17115565357305
+"418","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2008,9.18440214557235
+"419","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2009,4.14068627428696
+"420","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2010,4.53472657673113
+"421","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2011,4.16320286299805
+"422","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2012,2.6658497137102
+"423","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2013,3.37512225810971
+"424","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2014,4.35459386704237
+"425","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2015,2.55522539221494
+"426","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2016,1.96599309784067
+"427","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2017,1.99140111063038
+"428","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2018,1.35249184584427
+"429","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2019,1.5282231621323
+"430","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2020,1.86335003372447
+"431","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2021,3.11583262722593
+"432","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2022,4.17692307692308
+"433","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2023,2.22
+"434","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2024,2.45
+"435","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2025,2.66
+"436","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2026,2.76
+"437","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2027,2.77
+"438","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2028,2.89
+"439","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2029,2.93
+"440","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2030,2.95
+"441","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2031,2.915
+"442","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2032,2.88
+"443","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2033,2.855
+"444","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2034,2.82
+"445","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2035,2.785
+"446","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2036,2.75
+"447","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2037,2.725
+"448","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2038,2.69
+"449","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2039,2.655
+"450","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2040,2.62
+"451","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2041,2.595
+"452","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2042,2.56
+"453","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2043,2.525
+"454","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2044,2.49
+"455","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2045,2.465
+"456","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2046,2.43
+"457","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2047,2.395
+"458","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2048,2.36
+"459","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2049,2.335
+"460","Canada Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2050,2.3
+"461","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2005,83.8725402193511
+"462","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2006,94.7953061950207
+"463","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2007,100.959932609239
+"464","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2008,133.895158117158
+"465","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2009,83.5443726850737
+"466","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2010,105.464859574605
+"467","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2011,122.544423314893
+"468","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2012,119.045274800294
+"469","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2013,122.003078854833
+"470","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2014,114.046957716327
+"471","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2015,58.9571886644627
+"472","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2016,51.9715686404359
+"473","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2017,59.7664732416328
+"474","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2018,74.7768874064137
+"475","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2019,64.352373640663
+"476","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2020,43.662117812555
+"477","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2021,72.984527301882
+"478","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2022,94.91
+"479","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2023,80
+"480","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2024,76
+"481","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2025,74.8333333333333
+"482","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2026,72.1666666666667
+"483","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2027,69.5
+"484","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2028,66.8333333333333
+"485","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2029,64.1666666666666
+"486","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2030,61.5
+"487","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2031,61.3
+"488","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2032,61.1
+"489","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2033,60.9
+"490","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2034,60.7
+"491","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2035,60.5
+"492","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2036,60.3
+"493","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2037,60.1
+"494","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2038,59.9
+"495","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2039,59.7
+"496","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2040,59.5
+"497","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2041,59.3
+"498","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2042,59.1
+"499","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2043,58.9
+"500","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2044,58.7
+"501","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2045,58.5
+"502","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2046,58.3
+"503","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2047,58.1
+"504","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2048,57.8999999999999
+"505","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2049,57.6999999999999
+"506","Canada Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2050,57.5
+"507","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2005,54.3307758303938
+"508","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2006,65.3548664552633
+"509","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2007,69.9433316597046
+"510","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2008,107.483199559043
+"511","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2009,70.6085924705493
+"512","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2010,87.0800648919957
+"513","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2011,101.243730394196
+"514","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2012,93.3088139035118
+"515","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2013,91.7070087440543
+"516","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2014,88.4906295292333
+"517","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2015,42.4262053085169
+"518","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2016,35.0722346674421
+"519","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2017,45.4763599082138
+"520","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2018,46.2675968702545
+"521","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2019,49.8964862436196
+"522","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2020,29.6056373661847
+"523","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2021,58.8327407882522
+"524","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2022,78.1846153846154
+"525","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2023,63
+"526","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2024,61
+"527","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2025,62.3333333333333
+"528","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2026,59.6666666666667
+"529","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2027,57
+"530","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2028,54.3333333333333
+"531","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2029,51.6666666666666
+"532","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2030,49
+"533","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2031,48.8
+"534","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2032,48.6
+"535","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2033,48.4
+"536","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2034,48.2
+"537","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2035,48
+"538","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2036,47.8
+"539","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2037,47.6
+"540","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2038,47.4
+"541","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2039,47.2
+"542","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2040,47
+"543","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2041,46.8
+"544","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2042,46.6
+"545","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2043,46.4
+"546","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2044,46.2
+"547","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2045,46
+"548","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2046,45.8
+"549","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2047,45.6
+"550","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2048,45.3999999999999
+"551","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2049,45.1999999999999
+"552","Canada Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2050,45
+"553","Global Net-zero","Brent - 2022 US$/bbl",2005,80.8665756264198
+"554","Global Net-zero","Brent - 2022 US$/bbl",2006,93.5456355215549
+"555","Global Net-zero","Brent - 2022 US$/bbl",2007,101.095032141505
+"556","Global Net-zero","Brent - 2022 US$/bbl",2008,130.315020512094
+"557","Global Net-zero","Brent - 2022 US$/bbl",2009,83.262915326185
+"558","Global Net-zero","Brent - 2022 US$/bbl",2010,105.633733989938
+"559","Global Net-zero","Brent - 2022 US$/bbl",2011,143.135843691189
+"560","Global Net-zero","Brent - 2022 US$/bbl",2012,140.694974846012
+"561","Global Net-zero","Brent - 2022 US$/bbl",2013,134.848792714513
+"562","Global Net-zero","Brent - 2022 US$/bbl",2014,120.982067039344
+"563","Global Net-zero","Brent - 2022 US$/bbl",2015,63.3786749727695
+"564","Global Net-zero","Brent - 2022 US$/bbl",2016,52.463337464405
+"565","Global Net-zero","Brent - 2022 US$/bbl",2017,63.7320769987563
+"566","Global Net-zero","Brent - 2022 US$/bbl",2018,81.8328285263673
+"567","Global Net-zero","Brent - 2022 US$/bbl",2019,72.6518989303432
+"568","Global Net-zero","Brent - 2022 US$/bbl",2020,46.4711179883946
+"569","Global Net-zero","Brent - 2022 US$/bbl",2021,75.8521205164993
+"570","Global Net-zero","Brent - 2022 US$/bbl",2022,100.94
+"571","Global Net-zero","Brent - 2022 US$/bbl",2023,85
+"572","Global Net-zero","Brent - 2022 US$/bbl",2024,80
+"573","Global Net-zero","Brent - 2022 US$/bbl",2025,72.5
+"574","Global Net-zero","Brent - 2022 US$/bbl",2026,65
+"575","Global Net-zero","Brent - 2022 US$/bbl",2027,57.5
+"576","Global Net-zero","Brent - 2022 US$/bbl",2028,50
+"577","Global Net-zero","Brent - 2022 US$/bbl",2029,42.5
+"578","Global Net-zero","Brent - 2022 US$/bbl",2030,35
+"579","Global Net-zero","Brent - 2022 US$/bbl",2031,34.45
+"580","Global Net-zero","Brent - 2022 US$/bbl",2032,33.9
+"581","Global Net-zero","Brent - 2022 US$/bbl",2033,33.35
+"582","Global Net-zero","Brent - 2022 US$/bbl",2034,32.8
+"583","Global Net-zero","Brent - 2022 US$/bbl",2035,32.25
+"584","Global Net-zero","Brent - 2022 US$/bbl",2036,31.7
+"585","Global Net-zero","Brent - 2022 US$/bbl",2037,31.15
+"586","Global Net-zero","Brent - 2022 US$/bbl",2038,30.6
+"587","Global Net-zero","Brent - 2022 US$/bbl",2039,30.05
+"588","Global Net-zero","Brent - 2022 US$/bbl",2040,29.5
+"589","Global Net-zero","Brent - 2022 US$/bbl",2041,28.95
+"590","Global Net-zero","Brent - 2022 US$/bbl",2042,28.4
+"591","Global Net-zero","Brent - 2022 US$/bbl",2043,27.85
+"592","Global Net-zero","Brent - 2022 US$/bbl",2044,27.3
+"593","Global Net-zero","Brent - 2022 US$/bbl",2045,26.75
+"594","Global Net-zero","Brent - 2022 US$/bbl",2046,26.2
+"595","Global Net-zero","Brent - 2022 US$/bbl",2047,25.65
+"596","Global Net-zero","Brent - 2022 US$/bbl",2048,25.1
+"597","Global Net-zero","Brent - 2022 US$/bbl",2049,24.55
+"598","Global Net-zero","Brent - 2022 US$/bbl",2050,24
+"599","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2005,65.7579446012748
+"600","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2006,74.3952768227681
+"601","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2007,82.3612303338737
+"602","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2008,110.793138099574
+"603","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2009,66.8933553332186
+"604","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2010,87.1363563637734
+"605","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2011,111.477519963389
+"606","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2012,100.300214698307
+"607","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2013,104.66530554729
+"608","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2014,97.9250801991823
+"609","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2015,69.5929831266362
+"610","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2016,63.3302290379649
+"611","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2017,72.7811846819254
+"612","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2018,78.7070695937494
+"613","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2019,77.7671165578603
+"614","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2020,50.5954436433972
+"615","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2021,85.9314966663854
+"616","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2022,119.73
+"617","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2023,103.95
+"618","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2024,96.285
+"619","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2025,72.3333333333333
+"620","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2026,69.6666666666667
+"621","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2027,67
+"622","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2028,64.3333333333333
+"623","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2029,61.6666666666666
+"624","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2030,59
+"625","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2031,58.8
+"626","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2032,58.6
+"627","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2033,58.4
+"628","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2034,58.2
+"629","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2035,58
+"630","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2036,57.8
+"631","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2037,57.6
+"632","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2038,57.4
+"633","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2039,57.2
+"634","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2040,57
+"635","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2041,56.8
+"636","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2042,56.6
+"637","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2043,56.4
+"638","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2044,56.2
+"639","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2045,56
+"640","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2046,55.8
+"641","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2047,55.6
+"642","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2048,55.3999999999999
+"643","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2049,55.1999999999999
+"644","Global Net-zero","Canadian Light Sweet (CLS) - 2022 US$/bbl",2050,55
+"645","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2005,12.5999507828116
+"646","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2006,9.45888665761374
+"647","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2007,9.52643642374702
+"648","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2008,11.6655123513011
+"649","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2009,5.29331774606107
+"650","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2010,5.70987463721634
+"651","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2011,5.05689356459457
+"652","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2012,3.42444088304015
+"653","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2013,4.55027031859492
+"654","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2014,5.21450968557224
+"655","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2015,3.18589287420458
+"656","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2016,3.01058475161537
+"657","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2017,3.51844368955468
+"658","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2018,3.61990464623026
+"659","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2019,2.90201088360245
+"660","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2020,2.26280569720415
+"661","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2021,4.18369010043042
+"662","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2022,6.42
+"663","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2023,3.2
+"664","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2024,3.7
+"665","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2025,3.66666666666667
+"666","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2026,3.33333333333333
+"667","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2027,3
+"668","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2028,2.66666666666667
+"669","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2029,2.33333333333333
+"670","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2030,2
+"671","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2031,1.99
+"672","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2032,1.98
+"673","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2033,1.97
+"674","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2034,1.96
+"675","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2035,1.95
+"676","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2036,1.94
+"677","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2037,1.93
+"678","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2038,1.92
+"679","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2039,1.91
+"680","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2040,1.9
+"681","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2041,1.89
+"682","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2042,1.88
+"683","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2043,1.87
+"684","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2044,1.86
+"685","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2045,1.85
+"686","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2046,1.84
+"687","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2047,1.83
+"688","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2048,1.82
+"689","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2049,1.81
+"690","Global Net-zero","Henry Hub - 2022 US$/MMBtu",2050,1.8
+"691","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2005,10.5804306456603
+"692","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2006,8.09234759308421
+"693","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2007,8.17115565357305
+"694","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2008,9.18440214557235
+"695","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2009,4.14068627428696
+"696","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2010,4.53472657673113
+"697","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2011,4.16320286299805
+"698","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2012,2.6658497137102
+"699","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2013,3.37512225810971
+"700","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2014,4.35459386704237
+"701","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2015,2.55522539221494
+"702","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2016,1.96599309784067
+"703","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2017,1.99140111063038
+"704","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2018,1.35249184584427
+"705","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2019,1.5282231621323
+"706","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2020,1.86335003372447
+"707","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2021,3.11583262722593
+"708","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2022,4.17692307692308
+"709","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2023,2.22
+"710","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2024,2.45
+"711","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2025,2.57666666666667
+"712","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2026,2.35333333333333
+"713","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2027,2.19
+"714","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2028,2.02666666666667
+"715","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2029,1.86333333333333
+"716","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2030,1.7
+"717","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2031,1.69
+"718","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2032,1.68
+"719","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2033,1.67
+"720","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2034,1.66
+"721","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2035,1.65
+"722","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2036,1.64
+"723","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2037,1.63
+"724","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2038,1.62
+"725","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2039,1.61
+"726","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2040,1.6
+"727","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2041,1.59
+"728","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2042,1.58
+"729","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2043,1.57
+"730","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2044,1.56
+"731","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2045,1.55
+"732","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2046,1.54
+"733","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2047,1.53
+"734","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2048,1.52
+"735","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2049,1.51
+"736","Global Net-zero","Nova Inventory Transfer (NIT) - 2022 US$/MMBtu",2050,1.5
+"737","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2005,83.8725402193511
+"738","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2006,94.7953061950207
+"739","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2007,100.959932609239
+"740","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2008,133.895158117158
+"741","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2009,83.5443726850737
+"742","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2010,105.464859574605
+"743","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2011,122.544423314893
+"744","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2012,119.045274800294
+"745","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2013,122.003078854833
+"746","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2014,114.046957716327
+"747","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2015,58.9571886644627
+"748","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2016,51.9715686404359
+"749","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2017,59.7664732416328
+"750","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2018,74.7768874064137
+"751","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2019,64.352373640663
+"752","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2020,43.662117812555
+"753","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2021,72.984527301882
+"754","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2022,94.91
+"755","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2023,80
+"756","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2024,76
+"757","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2025,70
+"758","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2026,62.5
+"759","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2027,55
+"760","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2028,47.5
+"761","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2029,40
+"762","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2030,32.5
+"763","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2031,31.95
+"764","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2032,31.4
+"765","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2033,30.85
+"766","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2034,30.3
+"767","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2035,29.75
+"768","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2036,29.2
+"769","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2037,28.65
+"770","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2038,28.1
+"771","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2039,27.55
+"772","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2040,27
+"773","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2041,26.45
+"774","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2042,25.9
+"775","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2043,25.35
+"776","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2044,24.8
+"777","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2045,24.25
+"778","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2046,23.7
+"779","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2047,23.15
+"780","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2048,22.6
+"781","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2049,22.05
+"782","Global Net-zero","West Texas Intermediate (WTI) - 2022 US$/bbl",2050,21.5
+"783","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2005,54.3307758303938
+"784","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2006,65.3548664552633
+"785","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2007,69.9433316597046
+"786","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2008,107.483199559043
+"787","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2009,70.6085924705493
+"788","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2010,87.0800648919957
+"789","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2011,101.243730394196
+"790","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2012,93.3088139035118
+"791","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2013,91.7070087440543
+"792","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2014,88.4906295292333
+"793","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2015,42.4262053085169
+"794","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2016,35.0722346674421
+"795","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2017,45.4763599082138
+"796","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2018,46.2675968702545
+"797","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2019,49.8964862436196
+"798","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2020,29.6056373661847
+"799","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2021,58.8327407882522
+"800","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2022,78.1846153846154
+"801","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2023,63
+"802","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2024,61
+"803","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2025,57.5
+"804","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2026,50
+"805","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2027,42.5
+"806","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2028,35
+"807","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2029,27.5
+"808","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2030,20
+"809","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2031,19.45
+"810","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2032,18.9
+"811","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2033,18.35
+"812","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2034,17.8
+"813","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2035,18
+"814","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2036,17.95
+"815","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2037,17.75
+"816","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2038,17.6
+"817","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2039,17.3
+"818","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2040,17
+"819","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2041,16.45
+"820","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2042,15.9
+"821","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2043,15.35
+"822","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2044,14.8
+"823","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2045,14.25
+"824","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2046,13.7
+"825","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2047,13.15
+"826","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2048,12.6
+"827","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2049,12.05
+"828","Global Net-zero","Western Canadian Select (WCS) - 2022 US$/bbl",2050,11.5
