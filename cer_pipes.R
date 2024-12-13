@@ -120,7 +120,7 @@ pipe_data%>%filter(pipe_name=="Trans-Mountain",key_point!="system")%>%
        title=paste("Trans-Mountain Pipeline Shipments by Product (All Destinations)",sep=""),
        caption="Source: CER Data for Trans-Mountain, graph by Andrew Leach.")
 
-
+test<-pipe_data %>%filter(pipe_name=="Enbridge-Mainline")
 
 plot_pipeline_data <- function(pipe_data, pipe_name, key_points,title_sent) {
   pipe_data %>%
@@ -156,7 +156,7 @@ plot_pipeline_data <- function(pipe_data, pipe_name, key_points,title_sent) {
     ) +
     pipe_plot_theme() + # Assuming this is a custom theme function
     facet_wrap(~pair, ncol = 1, 
-               scales = "fixed") +
+               scales = "free_y") +
     labs(
       y = "Shipments (Monthly, Thousands of Cubic Metres per Day)",
       x = "Date",
@@ -165,7 +165,9 @@ plot_pipeline_data <- function(pipe_data, pipe_name, key_points,title_sent) {
     )
 }
 
-plot_pipeline_data(pipe_data,pipe_name = c("Trans-Mountain","Keystone","Enbridge-Mainline"),
+plot_pipeline_data(pipe_data%>%
+                   filter(trade_type%in%c("export","intracanada / export"),date>=Sys.Date()-years(10)),
+                   pipe_name = c("Trans-Mountain","Keystone","Enbridge-Mainline"),
                    key_point = c("Sumas","International boundary at or near Haskett, Manitoba","ex-Gretna"),
                    title_sent="Pipeline Throughput at Major Export Points by Product (All Destinations)")
 #ALL EXPORTS
