@@ -3,8 +3,7 @@ library(lubridate)
 library(openxlsx)
 library(janitor)
 library(viridis)
-names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
-         "Keystone","MNP","Trans-Mountain","TQM","tcpl-mainline","Westcoast","ngtl")
+names<-c("Enbridge-Mainline","Keystone","Trans-Mountain")
 
 #https://www.neb-one.gc.ca/open/energy/throughput-capacity/nbridge-mainline-throughput-and-capacity-dataset.csv
 #https://open.canada.ca/data/en/dataset/dc343c43-a592-4a27-8ee7-c77df56afb34/resource/4db7bc7c-d9cc-468b-8130-e799b13c69e8
@@ -14,8 +13,8 @@ wb <- createWorkbook()
 data_store <- list()
 
 get_pipe_data<-function(pipe_name="Enbridge-Mainline",skip_test=TRUE){
-  names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
-           "Keystone","MNP","Trans-Mountain","TQM","tcpl-mainline","Westcoast","ngtl")
+  #names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
+  #         "Keystone","MNP","Trans-Mountain","TQM","tcpl-mainline","Westcoast","ngtl")
   pipe_data<-"No data"
   
   if(pipe_name %in% names)
@@ -56,6 +55,13 @@ for(pipe in names){
   writeData(wb, sheet = pipe, x = pipe_data)
   data_store[[pipe]]<-pipe_data
 }
+
+
+mainline_data <- get_pipe_data("Trans-Mountain")%>%
+  filter(key_point=="system")%>%
+  group_by(year,key_point)%>%
+  summarize(nameplate_cap=last(available_capacity_1000_m3_d))
+
 
 #write.xlsx(wb,file = "2018NIR_prelim.xlsx")
 saveWorkbook(wb,"NEB_pipe_data.xlsx",overwrite = TRUE)
@@ -166,9 +172,10 @@ plot_pipeline_data <- function(pipe_data, pipe_name, key_points,title_sent) {
 }
 
 plot_pipeline_data(pipe_data%>%
-                   filter(trade_type%in%c("export","intracanada / export"),date>=Sys.Date()-years(10)),
+                     
+                   filter(trade_type%in%c("export","intracanada / export"),date>=Sys.Date()-years(15)),
                    pipe_name = c("Trans-Mountain","Keystone","Enbridge-Mainline"),
-                   key_point = c("Sumas","International boundary at or near Haskett, Manitoba","ex-Gretna"),
+                   key_point = c("Westridge","Sumas","International boundary at or near Haskett, Manitoba","ex-Gretna"),
                    title_sent="Pipeline Throughput at Major Export Points by Product (All Destinations)")
 #ALL EXPORTS
 

@@ -1,7 +1,11 @@
 library(tidyverse)
 library(lubridate)
 library(openxlsx)
+library(readxl)
 library(RColorBrewer)
+library(janitor)
+library(cowplot)
+
 
 
 
@@ -10,7 +14,7 @@ library(openxlsx)
 
 # Energy Futures Supply
 
-if(!file.exists("cer.figs.xlsx"))
+if(!file.exists("cer_figs.xlsx"))
   download.file("https://www.cer-rec.gc.ca/en/data-analysis/canada-energy-future/2023/figures.xlsx",destfile = "cer_figs.xlsx",mode="wb")
 
 cer_supply<-read_xlsx("cer_figs.xlsx",sheet="R.33",skip = 5)%>%clean_names()%>%select(-unit,-"total_pipeline_capacity_and_structural_rail")
@@ -19,84 +23,164 @@ cer_supply<-read_xlsx("cer_figs.xlsx",sheet="R.33",skip = 5)%>%clean_names()%>%s
 #PIPE CAPACITIES
 
 #pipe_capacity_data <- read.xlsx(xlsxFile = "C:/Users/aleach/Google Drive/Reports/NEB/EF2016FigureData.xlsx", sheet = "10.7", startRow = 3,skipEmptyRows = TRUE,detectDates = TRUE)
-pipe_capacity_data <- read.xlsx(xlsxFile = "pipes_capacity.xlsx", sheet = "2020_mods", startRow = 3,skipEmptyRows = TRUE,detectDates = TRUE)
-names(pipe_capacity_data)[1]<-"Year"
-names(pipe_capacity_data)[grep("Western.Refinery.Runs.Net.Burnaby",names(pipe_capacity_data))]<-"Western.Refinery.Runs"
-#names(pipe_capacity_data)[grep("2016.NEB.Western.Canadian.Pipeline.Demand",names(pipe_capacity_data))]<-"2016.NEB.Western.Canadian.Pipeline.Demand"
-pipe_capacity_data$`2014.CAPP.Supply.Raw`<-NULL
-pipe_capacity_data$`2018.CAPP.Supply.Raw`<-NULL
-
-pipe_capacity_data$`CAPP.2019.Offtake`<-pipe_capacity_data$CAPP.2019.Supply.Raw/6.2929- pipe_capacity_data$Western.Refinery.Runs+pipe_capacity_data$Enbridge.Bakken.Volumes
-pipe_capacity_data$`2019.CAPP.Supply.Raw`<-NULL
-
-pipe_capacity_data$CER.2019.Supply.Available<-NULL
-
-pipe_capacity_data <- pipe_capacity_data %>% left_join(cer_supply,by=c("Year"="year"))
-
-df1<-pipe_capacity_data%>%pivot_longer(cols=c("Enbridge.Mainline","Express","Trans.Mountain","Keystone","Rangeland/Milk.River","Keystone.XL","Trans.Mountain.Expansion","Northern.Gateway","Energy.East"), names_to = "Pipeline",values_to =  "Capacity")
-
-expansions<-c("Keystone.XL","Trans.Mountain.Expansion","Northern.Gateway","Energy.East")
-df1<-filter(df1,!(Pipeline %in% expansions))%>%
-  mutate(Pipeline=factor(Pipeline,levels=
-      c("Implied.Rail","Enbridge.Expansions","Keystone","Express","Trans.Mountain","Rangeland/Milk.River","Enbridge.Mainline")))
-
-#c("Rail, suppos?","Agrandissements d'Enbridge","Keystone","Express","Trans.Mountain","Rangeland/Milk River","R?seau principal d'Enbridge" P?trole disponible pour l'exportation (NEB 2016)	P?trole disponible pour l'exportation (CAPP 2017))
+pipe_capacity_data <- read_excel("pipes_capacity.xlsx", sheet = "2020_mods",skip=2)%>%
+  rename("Year"=1)%>%clean_names()
 
 
-levels(df1$Pipeline)<-gsub("\\.", " ", levels(df1$Pipeline)) 
-levels(df1$Pipeline)[levels(df1$Pipeline)=="Implied Rail"]<-"Capacity Shortfall"
+pipe_capacity_data <-pipe_capacity_data%>%
+  mutate(
+    capp_2019_offtake=capp_2019_supply_raw/6.2929- western_refinery_runs_net_burnaby_nwr +enbridge_bakken_volumes)
 
-my_palette<-c(brewer.pal(7, "Set1"))
+pipe_capacity_data <- pipe_capacity_data %>% left_join(cer_supply%>%clean_names()%>%
+                                                         mutate(across(-year, ~ .x * 0.158987)),
+                                                        by = "year")
 
-my_palette<-rev(c(brewer.pal(6, "Dark2")))
-
-
-
-makeColors <- function(){
-  maxColors <- 11
-  usedColors <- c()
-  possibleColors <- colorRampPalette(rev(brewer.pal(11 , "PuOr" )) )(maxColors)
+pipe_capacities<-pipe_capacity_data%>%
+  pivot_longer(cols=c("enbridge_mainline","express","trans_mountain","keystone","rangeland_milk_river","keystone_xl","northern_gateway","energy_east"), names_to = "pipeline",values_to =  "capacity")%>%
+  mutate(labels=str_to_title(gsub("_"," ",pipeline)),
+         labels=gsub("Rangeland Milk River","Rangeland and Milk River",labels),
+         labels=gsub("Xl","XL",labels))%>%
+          mutate(pipeline= factor(pipeline, levels = pipeline, labels = labels),
+                 pipeline=fct_relevel(pipeline,"Express",after=1),
+                 pipeline=fct_relevel(pipeline,"Rangeland and Milk River",after=1),
+                 pipeline=fct_rev(pipeline)
+                 )
+          
+#levels(pipe_capacities$pipeline)
+         
+         forecasts<-pipe_capacity_data%>%
+  rename_with(~ str_replace(.x, "^total_supply_available_for_export", "cer_2023")) %>%
+  pivot_longer(cols=c(capp_2014_offtake,cer_2023_current_measures,s_p_2025), names_to = "forecast",values_to =  "supply")%>%
+                 select(year,forecast,supply)%>%
+  mutate(supply=case_when(
+    forecast=="cer_2019_supply_available"~supply* 0.158987,
+    #forecast=="cer_2020_reference"~supply* 0.158987,
+    forecast=="cer_2021_current"~supply* 0.158987,
+    grepl("cer_2023",forecast)~supply* 1000,
+    grepl("s_p_2025",forecast)~supply* 0.158987,
+    TRUE~supply),
+    labels=gsub("Capp","CAPP",str_to_title(gsub("_"," ",forecast))),
+    labels=gsub("Cer","CER",labels),
+    labels=gsub("Reference","Reference Case",labels),
+    labels=gsub("CER 2019 Current","CER 2019 Current Measures",labels),
+    labels=gsub("CER 2021 Current","CER 2021 Current Measures",labels),
+    labels=gsub("Supply Available","Current Measures",labels),
+    labels=gsub("Offtake","Forecast",labels),
+    labels=gsub("S P 2025","S&P 2025 (Approximate)",labels)
+    )%>%
+  mutate(forecast= factor(forecast, levels = forecast, labels = labels))
   
-  function(values){
-    newKeys <- setdiff(values, names(usedColors))
-    newColors <- possibleColors[1:length(newKeys)]
-    usedColors.new <-  c(usedColors, newColors)
-    names(usedColors.new) <- c(names(usedColors), newKeys)
-    usedColors <<- usedColors.new
-    
-    possibleColors <<- possibleColors[length(newKeys)+1:maxColors]
-    usedColors
-  }
-} 
 
-mkColor <- makeColors()
+expansions<-c("Keystone XL","Northern Gateway","Energy East")
 
 
-png<-1
+my_palette <- colorRampPalette(rev(brewer.pal(11 , "PuOr" )) )(10)[6:10]
 
-if(png==1)#set these to only turn on if you're making PNG graphs
-  set_png("pipe_capacity.png",height = 800,width = 1200)
-ggplot(df1) +
-  geom_area(data=filter(df1,df1$Pipeline!="Capacity Shortfall"),aes(Year,Capacity*6.2929/1000,fill=Pipeline),position="stack") +
-  #geom_area(data=filter(df1,df1$Pipeline!="test"),aes(Year,Capacity*6.2929/1000,fill=Pipeline),position="stack",alpha=0.8) +
-  geom_line(aes(Year,CAPP.2019.Offtake*6.2929/1000, colour = "test1" ),size=3) +
-  #geom_line(aes(Year,CAPP.2018.Offtake*6.2929/1000, colour = "test2" ),size=3) +
-  #geom_line(aes(Year,NEB.2016.Offtake*6.2929/1000, colour = "test3" ),size=3) +
-  geom_line(aes(Year,CAPP.2014.Offtake*6.2929/1000, colour = "test4" ),size=3) +
-  geom_line(aes(Year,CER.2019.Mod*6.2929/1000, colour = "test0" ),size=3) +
-  scale_colour_manual("",labels=c("CER 2019 Export Demand","CAPP 2019 Export Demand","CAPP 2014 Export Demand"),values=c("Black","Grey40","Firebrick"))+
-  #scale_fill_viridis("",discrete=TRUE,option="D")+
-  scale_fill_manual("",values = mkColor(df1$Pipeline),guide = "legend")+
-  guides(colour = guide_legend(order = 1,nrow = (3)), 
-         fill = guide_legend(order = 2,nrow = (4)))+
-  scale_y_continuous(expand = c(0, 0)) +
-  scale_x_continuous(expand = c(0, 0)) +
-  theme_classic()+slide_theme()+
-  labs(y="Export Capacity or Demand (million bbl/d)",x="Date",
+ggplot(pipe_capacities) +
+  geom_area(data=pipe_capacities%>% filter(!labels %in% expansions), aes(year,capacity*6.2981/1000,fill=pipeline),position="stack",colour="black",size=0.1) +
+  geom_line(data=forecasts,aes(year,supply*6.2929/1000, linetype = forecast,colour=forecast),size=1.2)+
+  geom_point(data=forecasts%>%filter(year%%5==0),aes(year,supply*6.2929/1000, shape = forecast,colour=forecast),size=2.5)+
+  scale_colour_manual("", values = c("black","black","black","black")) +
+  scale_shape_manual("", values = c(NA,NA,NA,NA)) +
+  scale_linetype_manual("", values = c("22","41","solid","2111")) +
+  scale_fill_manual("",values=my_palette,guide = "legend")+
+  guides(colour = guide_legend(order = 1,nrow = (3), keywidth = 2.8),
+         shape = guide_legend(order = 1,nrow = (3), keywidth = 2.8),
+         linetype = guide_legend(order = 1,nrow = (3), keywidth = 2.8), 
+         fill = guide_legend(order = 2,nrow = (3)))+
+  scale_y_continuous(expand = c(0, 0),breaks = scales::pretty_breaks()) +
+  scale_x_continuous(expand = c(0, 0),breaks = scales::pretty_breaks(10)) +
+  theme_ps()+theme(plot.margin = margin(t=5,r=15,l=5))+
+  labs(y="Export Capacity or Demand (million bbl/d)",x="",
        caption="Source: NEB Data, graph by Andrew Leach.",
        title=paste("Canadian Oil Export Pipeline Capacity and Export Demand",sep=""))
-if(png==1)#set these to only turn on if you're making PNG graphs
-  dev.off()
+ggsave("pipes_current.png",width=14,height=7,dpi = 300,bg="white")
+
+
+ggplot(pipe_capacities) +
+  geom_area(data=pipe_capacities%>% filter(!labels %in% expansions), aes(year,capacity*6.2981/1000,fill=pipeline),position="stack",colour="black",size=0.1) +
+  geom_line(data=forecasts,aes(year,supply*6.2929/1000, linetype = forecast,colour=forecast),size=1.2)+
+  geom_point(data=forecasts%>%filter(year%%5==0),aes(year,supply*6.2929/1000, shape = forecast,colour=forecast),size=2.5)+
+  scale_colour_manual("", values = c("black","black","black","black")) +
+  scale_shape_manual("", values = c(NA,NA,NA,NA)) +
+  scale_linetype_manual("", values = c("22","41","solid","2111")) +
+  scale_fill_manual("",values=my_palette,guide = "legend")+
+  guides(colour = guide_legend(order = 1,nrow = (2), keywidth = 2.8),
+         shape = guide_legend(order = 1,nrow = (2), keywidth = 2.8),
+         linetype = guide_legend(order = 1,nrow = (2), keywidth = 2.8), 
+         fill = guide_legend(order = 2,nrow = (3)))+
+  scale_y_continuous(expand = c(0, 0),breaks = scales::pretty_breaks()) +
+  scale_x_continuous(expand = c(0, 0),breaks = scales::pretty_breaks(10)) +
+  theme_ps()+theme(plot.margin = margin(t=5,r=15,l=5))+
+  labs(y="Export Capacity or Demand (million bbl/d)",x="",
+       caption="Source: NEB Data, graph by Andrew Leach.",
+       title=paste("Canadian Oil Export Pipeline Capacity and Export Demand",sep=""))
+ggsave("pipes_current.png",width=14,height=7,dpi = 300,bg="white")
+
+
+
+
+my_palette <- colorRampPalette(rev(brewer.pal(11 , "PuOr" )) )(10)[c(2:4,6:10)]
+pipe_plot<-ggplot(pipe_capacities) +
+  geom_area(data=pipe_capacities, aes(year,capacity*6.2981/1000,fill=pipeline),position="stack",linewidth=0.1,colour="black") +
+  geom_line(data=forecasts,aes(year,supply*6.2929/1000, linetype = forecast,colour=forecast),size=1.2)+
+  geom_point(data=forecasts%>%filter(year%%5==0),aes(year,supply*6.2929/1000, shape = forecast,colour=forecast),size=2.5)+
+  scale_colour_manual("", values = c("black","black","black","black","black")) +
+  scale_shape_manual("", values = c(NA,NA,NA,NA,NA)) +
+  scale_linetype_manual("", values = c("22","41","11")) +
+  scale_fill_manual("",values=my_palette,guide = "legend")+
+  guides(colour = guide_legend(order = 1,nrow = (3), keywidth = 2.2),
+         shape = guide_legend(order = 1,nrow = (3), keywidth = 2.2),
+         linetype = guide_legend(order = 1,nrow = (3), keywidth = 2.2), 
+         fill = guide_legend(order = 2,nrow = (4)))+
+  scale_y_continuous(expand = c(0, 0),breaks = scales::pretty_breaks()) +
+  scale_x_continuous(expand = c(0, 0),breaks = scales::pretty_breaks(10)) +
+  theme_ps()+theme(plot.margin = margin(t=5,r=15,l=5))+
+  
+  
+  labs(y="Export Capacity or Demand (million bbl/d)",x="",
+       caption="Source: NEB Data, graph by Andrew Leach.",
+       title=paste("Canadian Oil Export Pipeline Capacity and Export Demand",sep=""))
+
+
+pipe_plot+
+  labs(title=NULL,
+       caption=NULL
+  )       +
+  theme_minimal() +
+  theme(
+    axis.line = element_line(color = "black", linewidth = 0.4),
+    axis.ticks = element_line(color = "black", linewidth = 0.4),
+    
+    plot.title = element_text(size = 10, color = "black"),
+    axis.title  = element_text(size = 10, color = "black"),
+    
+    # x-axis labels shifted slightly down from ticks
+    text = element_text(size = 12, color = "black"),
+    axis.text.x = element_text(size = 12, color = "black",
+                               margin = margin(t = 5, b = 5)),
+    
+    # y-axis labels unchanged
+    axis.text.y = element_text(size = 12, color = "black"),
+    
+    panel.grid = element_blank(),
+    legend.position = "bottom",
+    plot.margin = margin(t = 5, r = 20, b = 5, l = 5)
+  )
+
+
+
+pipe_plot+
+  labs(title=NULL,
+       caption=NULL
+  )       +
+  theme_irpp()+
+  expand_limits(y=8.1)
+
+ggsave("pipes_proposed.png",width=6.5,height=5,dpi = 600,bg="white")
+
+ggsave("pipes_proposed.svg",width=6.5,height=5,dpi = 600,bg="white")
+
 
 
 df1<-pipe_capacity_data%>%

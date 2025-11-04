@@ -4,6 +4,8 @@ library(janitor)
 library(viridis)
 library(readxl)
 library(RColorBrewer)
+
+get_pipe_data<-function(){
 names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
         "Keystone","MNP","Trans-Mountain","TQM","tcpl-mainline","Westcoast","ngtl")
 #pipe<-"Keystone"
@@ -12,7 +14,7 @@ names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
 #https://open.canada.ca/data/en/dataset/dc343c43-a592-4a27-8ee7-c77df56afb34/resource/4db7bc7c-d9cc-468b-8130-e799b13c69e8
 #https://www.cer-rec.gc.ca/open/energy/throughput-capacity/keystone-throughput-and-capacity.csvnames<-c("Enbridge-mainline","Keystone","Trans-Mountain")
 
-data_store <- list()
+  data_store <- list()
 
 for(pipe in names){
   #file_name<-paste("https://www.neb-one.gc.ca/open/energy/throughput-capacity/",pipe,"-throughput-and-capacity-dataset.csv",sep="")
@@ -27,35 +29,51 @@ for(pipe in names){
   data_store[[pipe]]<-pipe_data
 }
 
-pipe_data<-bind_rows(data_store)
+bind_rows(data_store)
+}
 
+#pipe_data<-get_pipe_data()
+
+save(pipe_data,file = "pipe_data.Rdata")
+load(file = "pipe_data.Rdata")
 
 #ALL EXPORTS
 
-oil_export<-c("Enbridge-Mainline","Keystone","MNP","Trans-Mountain")
+oil_export_lines<-c("Enbridge-Mainline","Keystone","MNP","Trans-Mountain")
 export_points <-c("ex-Gretna","Sumas","Burnaby","Westridge","International boundary at or near Haskett, Manitoba")
 
-oil_export<-pipe_data %>% filter(pipe_name %in% oil_export)%>% filter(key_point %in% export_points)
-
+oil_export<-pipe_data %>% filter(pipe_name %in% oil_export_lines,key_point %in% export_points,product!="total")
+#test<-
   oil_export%>% filter(year>=2007)%>%
-  mutate(product=factor(str_to_title(product)),
-         product=fct_recode(product,"Domestic Light"="Domestic Light / Ngl" ),
-         product=fct_relevel(product,"Domestic Light"),
+  mutate(product=factor(str_to_title(product)),pipeline=factor(str_to_title(pipeline)))%>%
+    mutate(
+         product=fct_recode(product,"Light"="Domestic Light / Ngl","Light"="Domestic Light" ),
+         product=fct_recode(product,"Heavy"="Domestic Heavy"),
+         product=fct_recode(product,"Refined Products"="Refined Petroleum Products"),
+         product=fct_recode(product,"Light"="Foreign Light"),
+         product=fct_relevel(product,"Light"),
+         product=fct_relevel(product,"Refined Products"),
+         pipeline=fct_recode(pipeline,"Enbridge Mainline"="Enbridge Canadian Mainline System\r\n"),
+         pipeline=fct_recode(pipeline,"Keystone"="Keystone Pipeline"),
+         pipeline=fct_recode(pipeline,"Trans Mountain"="Trans Mountain Pipeline"),
          label=paste(pipeline," (",product,")",sep=""))%>%
       
   group_by(date,pipeline,product,label)%>%
   summarize(throughput=sum(throughput_1000_m3_d))%>%
+  #group_by(date)%>%
+  #mutate(total_capacity=sum(capacity))%>%
   ggplot(aes(date,throughput,group = interaction(product,pipeline),fill=pipeline,alpha=product)) +
   geom_area(position = "stack",color="black",linewidth=.25) +
-  scale_alpha_manual("Grades denoted by fill shading, e.g. for Enbridge Mainline:",values=c(.7,.5,1,.3))+
+  geom_area(position = "stack",color="black",linewidth=.25) +
+  scale_alpha_manual("Grades denoted by fill shading, e.g. for Trans Mountain:",values=c(0.25,0.6,1))+
   scale_fill_manual("",values=viridis(n=3,alpha=1,begin=.7,end=0,option = "E",direction=-1))+
   scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
   scale_y_continuous(expand = c(0, 0),
-                     
-                     sec.axis = sec_axis( trans=~.*1/.16, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
-  guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=.8,end=0,option = "E",direction=-1)[1]),order = 10) ,
+                     sec.axis = sec_axis( trans=~.*6.289810770, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
+    expand_limits(y=800)+
+  guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=0.8,end=1,option = "E",direction=1)[1]),order = 10) ,
          fill = guide_legend(order = 1) )+
-  theme_classic() +
+  theme_ps() +
   theme(panel.border = element_blank(),
         panel.grid = element_blank(),
         panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
@@ -70,14 +88,19 @@ oil_export<-pipe_data %>% filter(pipe_name %in% oil_export)%>% filter(key_point 
         legend.key.width=unit(2,"line"),
         legend.position = "bottom",
         legend.box = "vertical",
+        legend.title = element_text(size = 12),
+        
         #legend.direction = "horizontal",
         #legend.box = "horizontal",
         legend.text = element_text(size = 12),
         plot.title = element_text(hjust=0.5,size = 14))+
   labs(y="Shipments (Monthly, Thousands of Cubic Metres per Day)",x="Date",
-       title=paste("Canadian Pipeline Shipments by Product",sep=""),
-       caption="Source: CER Data for Enbridge Mainline (ex-Gretna), Keystone (MB border), and TransMountain (all deliveries), graph by Andrew Leach.")
+       title=paste("Canadian Major Export Pipeline Shipments by Product",sep=""),
+       caption="Source: CER Data for Enbridge Mainline (ex-Gretna), Keystone (MB border), and TransMountain, graph by Andrew Leach.")
 ggsave("cer_oil.png",dpi=300,bg="white",width = 15,height = 8)
+
+
+
 
 
 oil_export%>% filter(year>=2007)%>%
@@ -120,7 +143,7 @@ oil_export%>% filter(year>=2007)%>%
        caption="Source: CER Data for Enbridge Mainline (ex-Gretna), Keystone (MB border), and TransMountain (all delivery points), graph by Andrew Leach.")
 ggsave("cer_oil_grade.png",dpi=300,bg="white",width = 15,height = 8)
 
-
+#test<-
 oil_export%>% filter(year>=2007)%>%
   mutate(product=factor(str_to_title(product)),
          product=fct_recode(product,"Domestic Light"="Domestic Light / Ngl" ),
@@ -172,17 +195,19 @@ pipe_data %>% filter(pipe_name == "Enbridge-Mainline")%>% filter(key_point =="In
          label=paste(pipeline," (",product,")",sep=""))%>%
   
   group_by(date,pipeline,product,label)%>%
-  summarize(throughput=sum(throughput_1000_m3_d))%>%
+  summarize(throughput=sum(throughput_1000_m3_d),capacity=last(available_capacity_1000_m3_d))%>%
   ggplot(aes(date,throughput,group = product,fill=product)) +
   geom_area(position = "stack",,color="black",linewidth=.25) +
+  geom_line(aes(date,capacity,colour="Capacity"),linewidth=.85,lty="21") +
   scale_alpha_manual("Grades denoted by fill shading, e.g. for Enbridge Mainline:",values=c(.7,1,.3))+
   scale_fill_manual("",values=viridis(n=3,alpha=1,begin=.7,end=0,option = "E",direction=-1))+
+  scale_colour_manual("",values="black")+
   scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
   scale_y_continuous(expand = c(0, 0),
                      
-                     sec.axis = sec_axis( trans=~.*1/.16, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
+                     sec.axis = sec_axis( trans=~.*6.2898, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
   guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=.8,end=0,option = "E",direction=-1)[1]),order = 10) ,
-         fill = guide_legend(order = 1) )+
+         colour= guide_legend(order = 1),fill = guide_legend(order = 2) )+
   theme_classic() +
   theme(panel.border = element_blank(),
         panel.grid = element_blank(),
@@ -197,7 +222,7 @@ pipe_data %>% filter(pipe_name == "Enbridge-Mainline")%>% filter(key_point =="In
         plot.caption = element_text(face="italic",size = 12,hjust=0),
         legend.key.width=unit(2,"line"),
         legend.position = "bottom",
-        legend.box = "vertical",
+        legend.box = "horizontal",
         #legend.direction = "horizontal",
         #legend.box = "horizontal",
         legend.text = element_text(size = 12),
@@ -208,7 +233,146 @@ pipe_data %>% filter(pipe_name == "Enbridge-Mainline")%>% filter(key_point =="In
 ggsave("enb_sarnia.png",dpi=300,bg="white",width = 15,height = 8)
 
 
-pipe_data %>% filter(pipe_name == "Trans-Mountain", as.character(product)!="all")%>% 
+
+
+enb_capacity<-
+  pipe_data %>% filter(pipe_name == "Enbridge-Mainline")%>% filter(key_point =="ex-Gretna")%>% 
+  filter(year>=2007)%>%
+  mutate(product=factor(str_to_title(product)),
+         product=fct_recode(product,"Domestic Light"="Domestic Light / Ngl" ),
+         product=fct_relevel(product,"Domestic Light"),
+         label=paste(pipeline," (",product,")",sep=""))%>%
+  
+  group_by(date,pipeline,product,label)%>%
+  summarize(throughput=sum(throughput_1000_m3_d),capacity=last(available_capacity_1000_m3_d))
+
+
+sarnia_capacity<-
+  pipe_data %>% filter(pipe_name == "Enbridge-Mainline")%>% filter(key_point =="Into-Sarnia")%>% 
+  filter(year>=2007)%>%
+  mutate(product=factor(str_to_title(product)),
+         product=fct_recode(product,"Domestic Light"="Domestic Light / Ngl" ),
+         product=fct_relevel(product,"Domestic Light"),
+         label=paste(pipeline," (",product,")",sep=""))%>%
+  
+  group_by(date,pipeline,product,label)%>%
+  summarize(throughput=sum(throughput_1000_m3_d),capacity=last(available_capacity_1000_m3_d))%>%
+  ungroup()%>%
+  mutate(pipeline=fct_recode(pipeline,"Enbridge Mainline (Sarnia, ON)"="Enbridge Canadian Mainline system\r\n"))
+
+keystone_capacity<-
+  pipe_data %>% filter(pipe_name == "Keystone")%>% 
+  filter(key_point =="International boundary at or near Haskett, Manitoba",product!="system",,product!="Total")%>% 
+  filter(year>=2007)%>%
+  mutate(product=factor(str_to_title(product)),
+         product=fct_recode(product,"Domestic Light"="Domestic Light / Ngl" ),
+         product=fct_relevel(product,"Domestic Light"),
+         label=paste(pipeline," (",product,")",sep=""))%>%
+  
+  group_by(date,pipeline,product,label)%>%
+  summarize(throughput=sum(throughput_1000_m3_d),capacity=pmax(available_capacity_1000_m3_d))
+  
+  
+
+tm_capacity<-
+  pipe_data %>% filter(pipe_name == "Trans-Mountain",!is.na(product),product!="Total")%>% 
+  filter(year>=2007)%>%
+  mutate(product=factor(str_to_title(product)),
+         product=fct_recode(product,"Domestic Light"="Domestic Light / Ngl" ),
+         product=fct_relevel(product,"Domestic Light"),
+         )%>%
+  group_by(date,pipeline,product)%>%
+  summarize(throughput=sum(throughput_1000_m3_d))%>%
+  left_join(
+    pipe_data %>% filter(pipe_name == "Trans-Mountain",key_point=="system")%>%
+      group_by(date,pipeline)%>%
+      summarize(capacity=available_capacity_1000_m3_d,)
+  )
+
+capacity=bind_rows(enb_capacity,sarnia_capacity,keystone_capacity,tm_capacity)%>%
+  mutate(pipeline=factor(str_to_title(pipeline)))%>%
+  mutate(
+    pipeline=fct_recode(pipeline,"Enbridge Mainline (Gretna, MB)"="Enbridge Canadian Mainline System\r\n"),
+    pipeline=fct_recode(pipeline,"Enbridge Mainline (Sarnia, ON)"="Enbridge Mainline (Sarnia, On)"),
+    pipeline=fct_recode(pipeline,"Keystone"="Keystone Pipeline"),
+    pipeline=fct_recode(pipeline,"Trans Mountain"="Trans Mountain Pipeline"),
+    product=fct_recode(product,"Refined Products"="Refined Petroleum Products"),
+    pipeline=fct_relevel(pipeline,"Keystone",after = 2),
+    )
+
+capacity%>%
+  mutate(year=year(date))%>%
+  filter(year==2025)%>%
+  group_by(pipeline,year,product)%>%
+  summarize(throughput=max(throughput),
+            capacity=max(capacity))%>%
+  group_by(pipeline,year)%>%
+  summarize(throughput=sum(throughput,na.rm = T),
+            capacity=max(capacity))%>%
+  ungroup()%>%
+  mutate(util=throughput/capacity,
+         total=sum(throughput)/sum(capacity))
+
+
+
+
+facet_plot<-
+  capacity%>%
+  ggplot() +
+  geom_area(aes(date,throughput,group = product,fill=product),
+            position = "stack",color="black",linewidth=.05) +
+  facet_wrap(~pipeline)+
+  geom_line(data=capacity %>% group_by(date,pipeline) %>% summarize(capacity=first(capacity)),
+              aes(date,capacity,colour="Capacity"),linewidth=.5,lty="solid") +
+  scale_alpha_manual("Grades denoted by fill shading, e.g. for Enbridge Mainline:",values=c(.7,1,.3))+
+  scale_fill_manual("",values=viridis(n=4,alpha=1,begin=.7,end=0,option = "E",direction=-1))+
+  scale_colour_manual("",values="black")+
+  scale_x_date(name=NULL,date_breaks = "2 year", date_labels =  "%Y",expand=c(0,0)) +
+  scale_y_continuous(expand = c(0, 0),
+                     
+                     sec.axis = sec_axis( trans=~.*6.2898, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
+  guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=.8,end=0,option = "E",direction=-1)[1]),order = 10) ,
+         colour= guide_legend(order = 1),fill = guide_legend(order = 2) )+
+  theme_ps_grid() +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
+        axis.line.x = element_line(color = "gray"),
+        axis.line.y = element_line(color = "gray"),
+        axis.text = element_text(size = 12),
+        axis.text.x = element_text(margin = margin(t = 10),angle=90),
+        axis.title = element_text(size = 12),
+        #axis.label.x = element_text(size=20,vjust=+5),
+        plot.subtitle = element_text(size = 12,hjust=0.5),
+        plot.caption = element_text(face="italic",size = 12,hjust=0),
+        legend.key.width=unit(2,"line"),
+        legend.position = "bottom",
+        legend.box = "horizontal",
+        #legend.direction = "horizontal",
+        #legend.box = "horizontal",
+        legend.text = element_text(size = 12),
+        plot.title = element_text(hjust=0.5,size = 14))+
+  labs(y="Shipments (Monthly, Thousands of Cubic Metres per Day)",x="Date",
+       #title=paste("Canadian Pipeline Shipments by Product",sep=""),
+       #caption="Source: CER Data for Enbridge Mainline (ex-Gretna), Keystone (MB border), and TransMountain (all delivery points ex Kamloops terminal), graph by Andrew Leach."
+       )
+facet_plot
+
+facet_plot+
+  labs(title=NULL,
+       caption=NULL
+  )       +
+  theme_irpp()+
+  theme(axis.text.x = element_text(margin = margin(t = 2),angle=90))
+
+ggsave("pipes_facet.png",dpi=300,bg="white",width = 6.2,height = 5)
+
+ggsave("pipes_facet.svg",dpi=300,bg="white",width = 6.2,height = 5)
+
+
+
+
+pipe_data %>% filter(pipe_name == "Trans-Mountain", product!="all",key_point!="system")%>% 
   filter(year>=2007)%>%
   mutate(product=factor(str_to_title(product)),
          product=fct_recode(product,"Domestic Light"="Domestic Light / Ngl" ),
@@ -248,21 +412,70 @@ pipe_data %>% filter(pipe_name == "Trans-Mountain", as.character(product)!="all"
         plot.title = element_text(hjust=0.5,size = 14))+
   labs(y="Shipments (Monthly, Thousands of Cubic Metres per Day)",x="Date",
        title=paste("Canadian Pipeline Shipments by Product",sep=""),
-       caption="Source: CER Data for Enbridge Mainline (ex-Gretna), Keystone (MB border), and TransMountain (all deliveries), graph by Andrew Leach.")
+       caption="Source: CER Data for TransMountain (all deliveries), graph by Andrew Leach.")
 ggsave("tm_prods.png",dpi=300,bg="white",width = 15,height = 8)
+
+
+
+pipe_data %>% filter(pipe_name == "Trans-Mountain", product!="all",key_point!="system")%>% 
+  filter(year>=2007)%>%
+  mutate(key_point=as_factor(key_point),
+         key_point=fct_recode(key_point,"Sumas (US)"="Sumas" ),
+         key_point=fct_recode(key_point,"Westridge (port)"="Westridge" ),
+         key_point=fct_relevel(key_point,"Westridge (port)"),
+  )%>%
+  group_by(date,key_point)%>%
+  summarize(throughput=sum(throughput_1000_m3_d))%>%
+  ggplot(aes(date,throughput,group = key_point,fill=key_point)) +
+  geom_area(position = "stack",color="black",linewidth=.25) +
+  #facet_wrap(~key_point,ncol = 1, scales = "free_y")+
+  #scale_alpha_manual("Grades denoted by fill shading, e.g. for Burnaby:",values=c(.7,1,.3))+
+  scale_fill_manual("",values=viridis(n=3,alpha=1,begin=.7,end=0,option = "E",direction=-1))+
+  scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
+  scale_y_continuous(expand = c(0, 0),
+                     
+                     sec.axis = sec_axis( trans=~.*1/.16, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
+  guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=.8,end=0,option = "E",direction=-1)[1]),order = 10) ,
+         fill = guide_legend(order = 1) )+
+  theme_classic() +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
+        axis.line.x = element_line(color = "gray"),
+        axis.line.y = element_line(color = "gray"),
+        axis.text = element_text(size = 12),
+        axis.text.x = element_text(margin = margin(t = 10)),
+        axis.title = element_text(size = 12),
+        #axis.label.x = element_text(size=20,vjust=+5),
+        plot.subtitle = element_text(size = 12,hjust=0.5),
+        plot.caption = element_text(face="italic",size = 12,hjust=0),
+        legend.key.width=unit(2,"line"),
+        legend.position = "bottom",
+        legend.box = "vertical",
+        #legend.direction = "horizontal",
+        #legend.box = "horizontal",
+        legend.text = element_text(size = 12),
+        plot.title = element_text(hjust=0.5,size = 14))+
+  labs(y="Shipments (Monthly, Thousands of Cubic Metres per Day)",x="Date",
+       title=paste("Canadian Pipeline Shipments by Product",sep=""),
+       caption="Source: CER Data for TransMountain (all deliveries), graph by Andrew Leach.")
+ggsave("tm_points.png",dpi=300,bg="white",width = 15,height = 8)
+
+
 
 
 
 
 #pipe and capacity data
 options(scipen = 99)
+#test<-
 pipe_data %>% filter(pipe_name == "tcpl-mainline",key_point=="Prairies")%>% 
   #filter(year>=2007)%>%
-  group_by(date,key_point,product)%>%
-  summarize(throughput=sum(throughput_1000_m3_d),capacity=mean(capacity_1000_m3_d))%>%
-  ggplot(aes(date,throughput,fill="Throughput")) +
+  #group_by(date,key_point,product)%>%
+  #summarize(throughput=sum(throughput_1000_m3_d),capacity=mean(capacity_1000_m3_d))%>%
+  ggplot(aes(date,throughput_1000_m3_d/1000,fill="Throughput")) +
   geom_area(position = "stack") +
-  geom_line(aes(date,capacity,color="Capacity"),linewidth=.75) +
+  geom_line(aes(date,capacity_1000_m3_d/1000,color="Capacity"),linewidth=.75) +
   scale_fill_manual("",values=viridis(n=3,alpha=1,begin=.7,end=0,option = "E",direction=-1))+
   scale_color_manual("",values=viridis(n=3,alpha=1,begin=.7,end=0,option = "E",direction=-1)[2])+
   scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
@@ -288,7 +501,7 @@ pipe_data %>% filter(pipe_name == "tcpl-mainline",key_point=="Prairies")%>%
         legend.box = "horizontal",
         legend.text = element_text(size = 12),
         plot.title = element_text(hjust=0.5,size = 14))+
-  labs(y="Shipments (Monthly, Gigajoules Per Day)",x="Date",
+  labs(y="Shipments (Monthly, Million Cubic Metres Per Day)",x="Date",
        title=paste("Canadian Mainline Gas Shipments and Capacity",sep=""),
        caption="Source: CER Data for TCPL Mainline (Prairies), graph by Andrew Leach.")
 ggsave("tcpl_main.png",dpi=300,bg="white",width = 15,height = 8)
@@ -424,39 +637,26 @@ oil_apportion <- read.csv(file = "neb-oil-app-data.csv")%>% clean_names()%>%
          apportionment=apportionment*100,
   )
 
-oil_apportion%>%#filter(pipeline %in% c("Trans Mountain Pipeline"))%>%
-  filter(str_to_lower(pipeline) %in% c("enbridge canadian mainline","trans mountain pipeline","keystone pipeline"))%>%
+#test<-
+  oil_apportion%>%#filter(pipeline %in% c("Trans Mountain Pipeline"))%>%
+  mutate(pipeline=str_to_lower(pipeline),pipeline=gsub("\n","",pipeline),pipeline=gsub(" system","",pipeline))%>%
+  filter(pipeline %in% c("enbridge canadian mainline","trans mountain pipeline","keystone pipeline"))%>%
   #filter(!is.na(apportionment))%>%
-  filter(!(pipeline =="Enbridge Canadian Mainline" & key_point!="system"))%>%
-  mutate(apportionment=coalesce(apportionment,0))%>%
+  filter(!(pipeline =="enbridge canadian mainline" & key_point=="system"))%>%
+  group_by(date,pipeline)%>%
+  summarize(apportionment=max(apportionment))%>%
   ggplot() +
-  geom_line(aes(date,apportionment,group = pipeline,colour=pipeline),size=1.5) +
+  geom_line(aes(date,apportionment,group = str_to_title(pipeline),colour=str_to_title(pipeline)),size=0.85) +
   #geom_point(size=1) +
-  scale_color_viridis("",discrete=TRUE,option="D")+
+  scale_color_viridis("",discrete=TRUE,option="E",begin=0,end=0.7)+
   scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
   scale_y_continuous(expand = c(0, 0)) +
   expand_limits(y=100)+
-  theme_classic() +
-  theme(panel.border = element_blank(),
-        panel.grid = element_blank(),
-        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
-        axis.line.x = element_line(color = "gray"),
-        axis.line.y = element_line(color = "gray"),
-        axis.text = element_text(size = 12),
-        axis.text.x = element_text(margin = margin(t = 10)),
-        axis.title = element_text(size = 12),
-        #axis.label.x = element_text(size=20,vjust=+5),
-        plot.subtitle = element_text(size = 12,hjust=0.5),
-        plot.caption = element_text(face="italic",size = 12,hjust=0),
-        legend.key.width=unit(2,"line"),
-        legend.position = "bottom",
-        #legend.direction = "horizontal",
-        #legend.box = "horizontal",
-        legend.text = element_text(size = 12),
-        plot.title = element_text(hjust=0.5,size = 14))+
+  theme_ps_grid() +
+  
   labs(y="Approtionment share (%)",x="Date",
        title=paste("Canadian Common Carrier Pipeline Apportionment",sep=""),
-       caption="Source: NEB Data, graph by Andrew Leach.")
+       caption="Source: CER Data, graph by Andrew Leach.")
 ggsave("apportioned_pipes.png",dpi=300,bg="white",width = 15,height = 8)
 
 
@@ -1233,45 +1433,43 @@ if(png==1)#set these to only turn on if you're making PNG graphs
 
 
 
+download.file("https://www.cer-rec.gc.ca/en/data-analysis/energy-commodities/crude-oil-petroleum-products/statistics/weekly-crude-run-summary-data/historical-weekly-crude-run-donnees-sur-les-charges-hebdomadaires-historique.xlsx",destfile = "ref_runs.xlsx",mode="wb")
+ref_runs <- read_excel("ref_runs.xlsx", sheet = "WeeklyRegional",skip=6)%>%clean_names()%>%
+  select(date=1,region=region_english_region_anglais,runs=runs_for_the_week_charges_pour_la_semaine,
+         cap_util=percent_of_capacity_percent_de_la_capacite
+         )%>%
+  mutate(date=ymd(date),region=make_clean_names(region,allow_dupes = TRUE),
+         runs=runs*6.28981,#convert to bbls
+         region=as_factor(region)
+         )%>%
+    #distinct()%>%
+    #ungroup()%>%
+    #pivot_wider(names_from = region,values_from=c(runs,cap_util))%>%
+    #mutate(runs_canada=runs_ontario+runs_quebec_eastern_canada+runs_western_canada,
+    #       cap_canada=runs_ontario/(cap_util_ontario/100)+runs_quebec_eastern_canada/(cap_util_quebec_eastern_canada/100)+
+    #         runs_western_canada/(cap_util_western_canada/100),
+    #       )
+  group_by(region)%>%
+  mutate(m12_avg=as.numeric(rollapply(runs,52,mean,partial=TRUE,align = c("right"))),
+         
+         )%>%
+  group_by(date) %>%
+  mutate(Canada_runs=sum(runs,na.rm=T)) %>%
+  ungroup()%>%
+  mutate(can_m12_avg=rollapplyr(Canada_runs, 52, mean, partial=TRUE,align = c("right"))) %>% 
+  ungroup()%>%
+  mutate(region_label=str_to_title(gsub("_"," ",as.character(region))))
+  
 
-ref_runs <- read.xlsx(xlsxFile = "https://www.neb-one.gc.ca/nrg/sttstc/crdlndptrlmprdct/stt/crdrn-hstrcl.xlsx", sheet = "WeeklyRegional", startRow = 8,skipEmptyRows = TRUE,detectDates = TRUE)
-names(ref_runs)[1]<-"Date"
-names(ref_runs)[2]<-"Year_lag_date"
-names(ref_runs)[3]<-"Region"
-names(ref_runs)[5]<-"Runs"
-names(ref_runs)[6]<-"Capacity Utilization"
-names(ref_runs)[7]<-"4 week average"
-names(ref_runs)[8]<-"Year Lag 4 week average"
-names(ref_runs)[9]<-"YTD Average"
-names(ref_runs)[10]<-"YTD Average Year Lag"
-ref_runs<-ref_runs[,-4]
-ref_runs$Date<-as.Date(ref_runs$Date)
-
-ref_runs$m12_avg<-as.numeric(rollapply(ref_runs$Runs,52,mean,fill=NA,align = c("right")))
-
-ref_runs<- ref_runs %>% group_by(Region) %>%
-  mutate(m12_avg=rollapplyr(Runs, 52, mean, partial=TRUE,align = c("right"))) %>% ungroup()
-
-ref_runs<- ref_runs %>% group_by(Date) %>%
-  summarize(Canada_runs=sum(Runs)) %>%
-  mutate(can_m12_avg=rollapplyr(Canada_runs, 52, mean, partial=TRUE,align = c("right"))) %>% ungroup()%>% 
-  left_join(ref_runs,by="Date")
-
-
-
-lims=c(min(ref_runs$Date),max(ref_runs$Date)+months(3))
-breaks<-seq.Date(min(ref_runs$Date), max(ref_runs$Date)+months(3), by="1 year")
-
-set_png("ref_runs_canada.png")
-ggplot(ref_runs) +
-  geom_area(aes(Date,Runs*6.2929,fill=Region),position="stack") +
-  geom_line(aes(Date,can_m12_avg*6.2929,colour="m12_avg"),size=3) +
-  scale_x_date(name=NULL,breaks=breaks, limits=lims,date_labels =  "%b\n%Y",expand=c(0,0)) +
+ggplot(ref_runs%>%filter(region=="western_canada")) +
+  geom_area(aes(date,m12_avg,fill=region_label),position="stack") +
+  #geom_line(aes(date,can_m12_avg*6.2929,colour="m12_avg"),size=1.2,colour="black") +
+  scale_x_date(breaks=pretty_breaks(),date_labels =  "%b\n%Y",expand=c(0,0)) +
     scale_fill_manual("",values = colors_ua10(),guide = "legend")+
   scale_colour_manual("",labels=c("52 Week Canadian Average"),values=colors_ua10()[4])+
   guides(colour = guide_legend(order = 1), 
          fill = guide_legend(order = 2))+
-  #scale_y_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
   #scale_x_continuous(expand = c(0, 0)) +
   theme_bw() +
   theme(panel.border = element_blank(),
@@ -1293,18 +1491,18 @@ ggplot(ref_runs) +
         plot.title = element_text(hjust=0.5,size = 14))+
   labs(y="Weekly Refinery Runs (Thousands of barrels per day)",x="Date",
        title=paste("Canadian Weekly Refinery Runs",sep=""),
-       caption="Source: NEB Data, graph by Andrew Leach.")
-dev.off()
+       caption="Source: CER Data, graph by Andrew Leach.")
 
-set_png("ref_runs_west_canada.png")
-ggplot(filter(ref_runs,Region=="Western Canada")) +
-  geom_area(aes(Date,Runs*6.2929,fill=Region),position="stack") +
-  geom_line(aes(Date,m12_avg*6.2929,colour=Region),position="stack",size=3) +
-  scale_fill_manual("",values = colors_ua10(),guide = "legend",labels="Weekly Runs")+
-  scale_colour_manual("",labels=c("52 Week Western Canadian Average"),values=colors_ua10()[3])+
-  scale_x_date(name=NULL,date_breaks = "1 year", limits=lims,date_labels =  "%b\n%Y",expand=c(0,0)) +
+ggplot(ref_runs%>%filter(region=="Western Canada")) +
+  geom_area(aes(date,runs,fill=region),position="stack") +
+  #geom_line(aes(date,can_m12_avg*6.2929,colour="m12_avg"),size=1.2,colour="black") +
+  scale_x_date(breaks=pretty_breaks(),date_labels =  "%b\n%Y",expand=c(0,0)) +
+  scale_fill_manual("",values = colors_ua10(),guide = "legend")+
+  scale_colour_manual("",labels=c("52 Week Canadian Average"),values=colors_ua10()[4])+
   guides(colour = guide_legend(order = 1), 
          fill = guide_legend(order = 2))+
+  scale_y_continuous(expand = c(0, 0)) +
+  #scale_x_continuous(expand = c(0, 0)) +
   theme_bw() +
   theme(panel.border = element_blank(),
         panel.grid = element_blank(),
@@ -1324,7 +1522,6 @@ ggplot(filter(ref_runs,Region=="Western Canada")) +
         legend.text = element_text(size = 12),
         plot.title = element_text(hjust=0.5,size = 14))+
   labs(y="Weekly Refinery Runs (Thousands of barrels per day)",x="Date",
-       title=paste("Western Canadian Weekly Refinery Runs",sep=""),
-       caption="Source: NEB Data, graph by Andrew Leach.")
-dev.off()
+       title=paste("Canadian Weekly Refinery Runs",sep=""),
+       caption="Source: CER Data, graph by Andrew Leach.")
 
