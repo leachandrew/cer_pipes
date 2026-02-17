@@ -132,7 +132,7 @@ pipe_plot<-ggplot(pipe_capacities) +
   guides(colour = guide_legend(order = 1,nrow = (3), keywidth = 2.2),
          shape = guide_legend(order = 1,nrow = (3), keywidth = 2.2),
          linetype = guide_legend(order = 1,nrow = (3), keywidth = 2.2), 
-         fill = guide_legend(order = 2,nrow = (4)))+
+         fill = guide_legend(order = 2,nrow = (3)))+
   scale_y_continuous(expand = c(0, 0),breaks = scales::pretty_breaks()) +
   scale_x_continuous(expand = c(0, 0),breaks = scales::pretty_breaks(10)) +
   theme_ps()+theme(plot.margin = margin(t=5,r=15,l=5))+
@@ -174,10 +174,10 @@ pipe_plot+
   labs(title=NULL,
        caption=NULL
   )       +
-  theme_irpp()+
+  theme_irpp(base_size = 16)+
   expand_limits(y=8.1)
 
-ggsave("pipes_proposed.png",width=6.5,height=5,dpi = 600,bg="white")
+ggsave("pipes_proposed.png",width=13,height=7,dpi = 600,bg="white")
 
 ggsave("pipes_proposed.svg",width=6.5,height=5,dpi = 600,bg="white")
 

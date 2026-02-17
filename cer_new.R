@@ -4,7 +4,7 @@ library(janitor)
 library(viridis)
 library(readxl)
 library(RColorBrewer)
-
+library(cowplot)
 get_pipe_data<-function(){
 names<-c("Alliance","Cochin","Enbridge-Mainline","Norman-Wells",
         "Keystone","MNP","Trans-Mountain","TQM","tcpl-mainline","Westcoast","ngtl")
@@ -314,7 +314,9 @@ capacity%>%
          total=sum(throughput)/sum(capacity))
 
 
-
+capacity<-capacity%>%
+  filter(!grepl("Sarnia",pipeline))
+  
 
 facet_plot<-
   capacity%>%
@@ -333,25 +335,7 @@ facet_plot<-
                      sec.axis = sec_axis( trans=~.*6.2898, name="Shipments (Monthly, Thousands of Barrels per Day)")) +
   guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=.8,end=0,option = "E",direction=-1)[1]),order = 10) ,
          colour= guide_legend(order = 1),fill = guide_legend(order = 2) )+
-  theme_ps_grid() +
-  theme(panel.border = element_blank(),
-        panel.grid = element_blank(),
-        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
-        axis.line.x = element_line(color = "gray"),
-        axis.line.y = element_line(color = "gray"),
-        axis.text = element_text(size = 12),
-        axis.text.x = element_text(margin = margin(t = 10),angle=90),
-        axis.title = element_text(size = 12),
-        #axis.label.x = element_text(size=20,vjust=+5),
-        plot.subtitle = element_text(size = 12,hjust=0.5),
-        plot.caption = element_text(face="italic",size = 12,hjust=0),
-        legend.key.width=unit(2,"line"),
-        legend.position = "bottom",
-        legend.box = "horizontal",
-        #legend.direction = "horizontal",
-        #legend.box = "horizontal",
-        legend.text = element_text(size = 12),
-        plot.title = element_text(hjust=0.5,size = 14))+
+  theme_irpp(base_size = 14)+
   labs(y="Shipments (Monthly, Thousands of Cubic Metres per Day)",x="Date",
        #title=paste("Canadian Pipeline Shipments by Product",sep=""),
        #caption="Source: CER Data for Enbridge Mainline (ex-Gretna), Keystone (MB border), and TransMountain (all delivery points ex Kamloops terminal), graph by Andrew Leach."
@@ -362,12 +346,12 @@ facet_plot+
   labs(title=NULL,
        caption=NULL
   )       +
-  theme_irpp()+
+  theme_irpp(base_size=15)+
   theme(axis.text.x = element_text(margin = margin(t = 2),angle=90))
 
-ggsave("pipes_facet.png",dpi=300,bg="white",width = 6.2,height = 5)
+ggsave("pipes_facet.png",dpi=300,bg="white",width = 13,height = 6)
 
-ggsave("pipes_facet.svg",dpi=300,bg="white",width = 6.2,height = 5)
+#ggsave("pipes_facet.svg",dpi=300,bg="white",width = 6.2,height = 5)
 
 
 
