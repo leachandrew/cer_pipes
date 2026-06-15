@@ -34,7 +34,7 @@ bind_rows(data_store)
 
 #pipe_data<-get_pipe_data()
 
-save(pipe_data,file = "pipe_data.Rdata")
+#save(pipe_data,file = "pipe_data.Rdata")
 load(file = "pipe_data.Rdata")
 
 #ALL EXPORTS
@@ -53,7 +53,7 @@ oil_export<-pipe_data %>% filter(pipe_name %in% oil_export_lines,key_point %in% 
          product=fct_recode(product,"Light"="Foreign Light"),
          product=fct_relevel(product,"Light"),
          product=fct_relevel(product,"Refined Products"),
-         pipeline=fct_recode(pipeline,"Enbridge Mainline"="Enbridge Canadian Mainline System\r\n"),
+         pipeline=fct_recode(pipeline,"Enbridge Mainline"="Enbridge Canadian Mainline System"),
          pipeline=fct_recode(pipeline,"Keystone"="Keystone Pipeline"),
          pipeline=fct_recode(pipeline,"Trans Mountain"="Trans Mountain Pipeline"),
          label=paste(pipeline," (",product,")",sep=""))%>%
@@ -73,27 +73,7 @@ oil_export<-pipe_data %>% filter(pipe_name %in% oil_export_lines,key_point %in% 
     expand_limits(y=800)+
   guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=0.8,end=1,option = "E",direction=1)[1]),order = 10) ,
          fill = guide_legend(order = 1) )+
-  theme_ps() +
-  theme(panel.border = element_blank(),
-        panel.grid = element_blank(),
-        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
-        axis.line.x = element_line(color = "gray"),
-        axis.line.y = element_line(color = "gray"),
-        axis.text = element_text(size = 12),
-        axis.text.x = element_text(margin = margin(t = 10)),
-        axis.title = element_text(size = 12),
-        #axis.label.x = element_text(size=20,vjust=+5),
-        plot.subtitle = element_text(size = 12,hjust=0.5),
-        plot.caption = element_text(face="italic",size = 12,hjust=0),
-        legend.key.width=unit(2,"line"),
-        legend.position = "bottom",
-        legend.box = "vertical",
-        legend.title = element_text(size = 12),
-        
-        #legend.direction = "horizontal",
-        #legend.box = "horizontal",
-        legend.text = element_text(size = 12),
-        plot.title = element_text(hjust=0.5,size = 14))+
+  theme_irpp(base_size = 16)+
   labs(y="Shipments (Monthly, Thousands of Cubic Metres per Day)",x="Date",
        title=paste("Canadian Major Export Pipeline Shipments by Product",sep=""),
        caption="Source: CER Data for Enbridge Mainline (ex-Gretna), Keystone (MB border), and TransMountain, graph by Andrew Leach.")
@@ -636,7 +616,7 @@ oil_apportion <- read.csv(file = "neb-oil-app-data.csv")%>% clean_names()%>%
   scale_x_date(name=NULL,date_breaks = "1 year", date_labels =  "%b\n%Y",expand=c(0,0)) +
   scale_y_continuous(expand = c(0, 0)) +
   expand_limits(y=100)+
-  theme_ps_grid() +
+  theme_irpp(base_size = 16) +
   
   labs(y="Approtionment share (%)",x="Date",
        title=paste("Canadian Common Carrier Pipeline Apportionment",sep=""),
@@ -1418,6 +1398,7 @@ if(png==1)#set these to only turn on if you're making PNG graphs
 
 
 download.file("https://www.cer-rec.gc.ca/en/data-analysis/energy-commodities/crude-oil-petroleum-products/statistics/weekly-crude-run-summary-data/historical-weekly-crude-run-donnees-sur-les-charges-hebdomadaires-historique.xlsx",destfile = "ref_runs.xlsx",mode="wb")
+library(zoo)
 ref_runs <- read_excel("ref_runs.xlsx", sheet = "WeeklyRegional",skip=6)%>%clean_names()%>%
   select(date=1,region=region_english_region_anglais,runs=runs_for_the_week_charges_pour_la_semaine,
          cap_util=percent_of_capacity_percent_de_la_capacite
@@ -1445,38 +1426,20 @@ ref_runs <- read_excel("ref_runs.xlsx", sheet = "WeeklyRegional",skip=6)%>%clean
   mutate(region_label=str_to_title(gsub("_"," ",as.character(region))))
   
 
-ggplot(ref_runs%>%filter(region=="western_canada")) +
+ggplot(ref_runs) +
   geom_area(aes(date,m12_avg,fill=region_label),position="stack") +
   #geom_line(aes(date,can_m12_avg*6.2929,colour="m12_avg"),size=1.2,colour="black") +
-  scale_x_date(breaks=pretty_breaks(),date_labels =  "%b\n%Y",expand=c(0,0)) +
-    scale_fill_manual("",values = colors_ua10(),guide = "legend")+
-  scale_colour_manual("",labels=c("52 Week Canadian Average"),values=colors_ua10()[4])+
+  scale_x_date(date_breaks = "2 years",date_labels =  "%b\n%Y",expand=c(0,0)) +
+  scale_fill_manual("",values = colors_ua10(),guide = "legend")+
   guides(colour = guide_legend(order = 1), 
          fill = guide_legend(order = 2))+
   scale_y_continuous(expand = c(0, 0)) +
   #scale_x_continuous(expand = c(0, 0)) +
-  theme_bw() +
-  theme(panel.border = element_blank(),
-        panel.grid = element_blank(),
-        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
-        axis.line.x = element_line(color = "gray"),
-        axis.line.y = element_line(color = "gray"),
-        axis.text = element_text(size = 12),
-        axis.text.x = element_text(margin = margin(t = 10)),
-        axis.title = element_text(size = 12),
-        #axis.label.x = element_text(size=20,vjust=+5),
-        plot.subtitle = element_text(size = 12,hjust=0.5),
-        plot.caption = element_text(face="italic",size = 12,hjust=0),
-        legend.key.width=unit(2,"line"),
-        legend.position = "bottom",
-        #legend.direction = "horizontal",
-        #legend.box = "horizontal",
-        legend.text = element_text(size = 12),
-        plot.title = element_text(hjust=0.5,size = 14))+
-  labs(y="Weekly Refinery Runs (Thousands of barrels per day)",x="Date",
+  theme_irpp(base_size=16) +
+  labs(y="Weekly Runs (Thousands barrels per day)",x=NULL,
        title=paste("Canadian Weekly Refinery Runs",sep=""),
        caption="Source: CER Data, graph by Andrew Leach.")
-
+ggsave("ref_runs.png",width = 11,height = 6,dpi = 300)
 ggplot(ref_runs%>%filter(region=="Western Canada")) +
   geom_area(aes(date,runs,fill=region),position="stack") +
   #geom_line(aes(date,can_m12_avg*6.2929,colour="m12_avg"),size=1.2,colour="black") +

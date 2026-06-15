@@ -36,23 +36,7 @@ pipe<-"Keystone"
                        sec.axis = sec_axis( trans=~.*1/6.2929, name="Tolls (to Canada/US border, dollars per barrel)")) +
   guides(alpha = guide_legend(override.aes = list(fill=viridis(n=3,alpha=1,begin=.8,end=0,option = "E",direction=-1)[1]),order = 10) ,
          fill = guide_legend(order = 1) )+
-  theme_classic() +
-  theme(panel.border = element_blank(),
-        panel.grid = element_blank(),
-        panel.grid.major.y = element_line(color = "gray",linetype="dotted"),
-        axis.line.x = element_line(color = "gray"),
-        axis.line.y = element_line(color = "gray"),
-        axis.text = element_text(size = 12),
-        axis.text.x = element_text(margin = margin(t = 10)),
-        axis.title = element_text(size = 12),
-        #axis.label.x = element_text(size=20,vjust=+5),
-        plot.subtitle = element_text(size = 12,hjust=0.5),
-        plot.caption = element_text(face="italic",size = 12,hjust=0),
-        legend.key.width=unit(2,"line"),
-        legend.position = "bottom",
-        legend.box = "horizontal",
-        legend.text = element_text(size = 12),
-        plot.title = element_text(hjust=0.5,size = 14))+
+  theme_irpp(base_size = 14) +
   labs(y="Tolls (to Canada/US border, dollars per cubic meter)",x="Date",
        title=paste("Keystone pipeline (Canadian) tolls by product, contract, and destination",sep=""),
        caption="Source: CER Data, graph by Andrew Leach.")
@@ -78,8 +62,8 @@ tolls<-c( "Uncommitted","Committed, 10 yr Term, Total Contract",
 #dest<-
 
 mainline_tolls %>% #select(path,service) %>% distinct()
-  filter(grepl("Edmonton Terminal, Alberta", path)) %>% 
-  filter(grepl("Nanticoke", path)) %>% 
+  filter(grepl("Edmonton Terminal, Alberta to Nanticoke, Ontario", path)) %>% 
+  filter(unit=="US$/m3")%>%
   mutate(date=ymd(date),product=as_factor(str_to_title(product)),
          product=fct_recode(product,"Condensate"="Cnd"),
          product=fct_relevel(product,"Light",after = 3),
